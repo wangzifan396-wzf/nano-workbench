@@ -158,7 +158,8 @@ if(typeof window!=='undefined'){
     {id:"QRForge", name:"QRForge", icon:"qr", cat:"编码工具", desc:"纯前端二维码生成器：文本/网址/WiFi/名片，导出 SVG 与 PNG。", tags:["qrcode","qr","generator","offline"]},
     {id:"VaultForge", name:"VaultForge", icon:"vault", cat:"安全工具", desc:"本地优先零知识加密密码库：AES-GCM + PBKDF2，数据永不出端。", tags:["vault","password","encryption","security","offline"]},
     {id:"MindForge", name:"MindForge", icon:"mind", cat:"可视化", desc:"本地优先思维导图编辑器：结构化节点树、自动布局、导出 PNG/SVG/JSON。", tags:["mindmap","node","graph","visualization","offline"]},
-    {id:"SnipForge", name:"SnipForge", icon:"snip", cat:"效率", desc:"本地优先代码片段管理器：分类标签、全文搜索、一键复制、JSON 导入导出，离线可用。", tags:["snippet","code","search","productivity","offline"]}
+    {id:"SnipForge", name:"SnipForge", icon:"snip", cat:"效率", desc:"本地优先代码片段管理器：分类标签、全文搜索、一键复制、JSON 导入导出，离线可用。", tags:["snippet","code","search","productivity","offline"]},
+    {id:"PlanForge", name:"PlanForge", icon:"plan", cat:"效率", desc:"本地优先甘特图 / 路线图规划器：任务依赖里程碑进度追踪，导出 PNG/SVG/JSON，离线可用。", tags:["gantt","roadmap","planning","timeline","offline"]}
   ];
   var ICONS = {
     regex:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
@@ -198,7 +199,8 @@ if(typeof window!=='undefined'){
     qr:'<rect x="3" y="3" width="6" height="6" rx="1"/><rect x="15" y="3" width="6" height="6" rx="1"/><rect x="3" y="15" width="6" height="6" rx="1"/><rect x="15" y="15" width="3" height="3"/><rect x="19" y="15" width="2" height="2"/><rect x="15" y="19" width="6" height="2" rx="1"/>',
     vault:'<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="12" cy="12" r="3.4"/><path d="M12 8.6V12m0 0 2.3 1.5M12 12l-2.3 1.5"/>',
     mind:'<circle cx="5" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.2"/><circle cx="18" cy="18" r="2.2"/><path d="M7.2 11 15.8 6.8M7.2 13 15.8 17.2"/>',
-    snip:'<path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5a2 2 0 0 0 2 2h1"/><path d="M16 3h1a2 2 0 0 1 2 2v5a2 2 0 0 0 2 2 2 2 0 0 0-2 2v5a2 2 0 0 1-2 2h-1"/>'
+    snip:'<path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5a2 2 0 0 0 2 2h1"/><path d="M16 3h1a2 2 0 0 1 2 2v5a2 2 0 0 0 2 2 2 2 0 0 0-2 2v5a2 2 0 0 1-2 2h-1"/>',
+    plan:'<path d="M4 6h10"/><path d="M4 11h14"/><path d="M4 16h7"/><path d="M17 3v18"/>'
   };
   function iconSvg(k){ return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+(ICONS[k]||"")+'</svg>'; }
 
