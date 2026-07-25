@@ -146,7 +146,8 @@ if(typeof window!=='undefined'){
     {id:"DrawForge", name:"DrawForge", icon:"draw", cat:"可视化", desc:"离线白板：手绘风、导出 PNG/SVG。", tags:["whiteboard","canvas"]},
     {id:"GraphForge", name:"GraphForge", icon:"graph", cat:"可视化", desc:"离线 Mermaid 图表编辑器。", tags:["mermaid","diagram"]},
     {id:"APIForge", name:"APIForge", icon:"apiforge", cat:"开发辅助", desc:"离线 REST / GraphQL 客户端。", tags:["rest","graphql","api-client"]},
-    {id:"ChatForge", name:"ChatForge", icon:"chatforge", cat:"AI 效率", desc:"本地优先 BYOK AI 对话。", tags:["ai","chat","llm"]}
+    {id:"ChatForge", name:"ChatForge", icon:"chatforge", cat:"AI 效率", desc:"本地优先 BYOK AI 对话。", tags:["ai","chat","llm"]},
+    {id:"FlowForge", name:"FlowForge", icon:"flow", cat:"任务管理", desc:"本地优先离线看板：多看板、拖拽、标签/优先级/截止。", tags:["kanban","task","productivity"]}
   ];
   var ICONS = {
     regex:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
@@ -176,7 +177,8 @@ if(typeof window!=='undefined'){
     draw:'<path d="M3 21l3.6-1L20 6.6a2 2 0 0 0-2.8-2.8L3.4 17.4 3 21z"/><path d="M14 7l3 3"/>',
     graph:'<circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.5 7.5 11 16M16.5 7.5 13 16M8 6h8"/>',
     apiforge:'<path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/>',
-    chatforge:'<path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.9-.9L3 21l1.9-5.6A8.5 8.5 0 1 1 21 11.5z"/>'
+    chatforge:'<path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.9-.9L3 21l1.9-5.6A8.5 8.5 0 1 1 21 11.5z"/>',
+    flow:'<rect x="3" y="4" width="4.5" height="16" rx="1.5"/><rect x="9.75" y="4" width="4.5" height="10" rx="1.5"/><rect x="16.5" y="4" width="4.5" height="13" rx="1.5"/>'
   };
   function iconSvg(k){ return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+(ICONS[k]||"")+'</svg>'; }
 
