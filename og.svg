@@ -1,40 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#0A0A0B"/>
-      <stop offset="1" stop-color="#141417"/>
+      <stop offset="1" stop-color="#101013"/>
     </linearGradient>
-    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#5E6AD2"/>
-      <stop offset="1" stop-color="#8b94f0"/>
-    </linearGradient>
+    <radialGradient id="glow" cx="82%" cy="16%" r="55%">
+      <stop offset="0%" stop-color="#5E6AD2" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#5E6AD2" stop-opacity="0"/>
+    </radialGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
-  <rect x="0.5" y="0.5" width="1199" height="629" fill="none" stroke="rgba(255,255,255,0.08)"/>
-  <g transform="translate(80,80)">
-    <rect width="40" height="40" rx="10" fill="url(#acc)"/>
-    <text x="20" y="27" font-size="22" text-anchor="middle" fill="#fff" font-family="sans-serif">⬡</text>
-    <text x="56" y="28" font-size="26" font-weight="700" fill="#fff" font-family="sans-serif">nano·tools</text>
-    <text x="56" y="52" font-size="17" fill="#71717A" font-family="sans-serif">/ workbench</text>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="#5E6AD2"/>
+  <g transform="translate(80,72)"><rect x="0" y="0" width="32" height="32" rx="8" fill="#5E6AD2"/><rect x="7" y="7" width="8" height="8" rx="2" fill="#0A0A0B"/><rect x="17" y="7" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="7" y="17" width="8" height="8" rx="2" fill="#10B981"/><rect x="17" y="17" width="8" height="8" rx="2" fill="#F5A623"/></g>
+  <text x="124" y="96" fill="#FFFFFF" font-size="22" font-weight="700">nano-tools</text>
+  <text x="78" y="252" fill="#FFFFFF" font-size="86" font-weight="800" letter-spacing="-1">nano-workbench</text>
+  <text x="82" y="308" fill="#A1A1AA" font-size="28">一个标签页，收纳全部 32 款工具</text>
+  <g transform="translate(80,346)">
+    <rect x="0" y="0" width="148" height="40" rx="10" fill="#141417" stroke="#5E6AD2" stroke-width="1.5"/>
+    <circle cx="22" cy="20" r="6" fill="#5E6AD2"/>
+    <text x="40" y="27" fill="#E4E4E7" font-size="22">聚合器</text>
   </g>
-  <text x="80" y="265" font-size="60" font-weight="800" fill="#fff" font-family="sans-serif">一个标签页，全部工具</text>
-  <text x="80" y="333" font-size="33" fill="#A1A1AA" font-family="sans-serif">28 款单文件工具，即时切换，数据永不离机</text>
-  <!-- tab mock -->
-  <g transform="translate(80,390)">
-    <rect width="1040" height="48" rx="10" fill="#1A1B1E" stroke="rgba(255,255,255,0.08)"/>
-    <rect x="14" y="11" width="120" height="26" rx="7" fill="#0A0A0B" stroke="#5E6AD2"/>
-    <text x="74" y="29" font-size="15" fill="#fff" text-anchor="middle" font-family="sans-serif">RegexLab</text>
-    <rect x="146" y="11" width="120" height="26" rx="7" fill="#141417" stroke="rgba(255,255,255,0.08)"/>
-    <text x="206" y="29" font-size="15" fill="#A1A1AA" text-anchor="middle" font-family="sans-serif">GraphForge</text>
-    <rect x="278" y="11" width="120" height="26" rx="7" fill="#141417" stroke="rgba(255,255,255,0.08)"/>
-    <text x="338" y="29" font-size="15" fill="#A1A1AA" text-anchor="middle" font-family="sans-serif">ChatForge</text>
-    <rect x="410" y="11" width="120" height="26" rx="7" fill="#141417" stroke="rgba(255,255,255,0.08)"/>
-    <text x="470" y="29" font-size="15" fill="#A1A1AA" text-anchor="middle" font-family="sans-serif">APIForge</text>
-  </g>
-  <g transform="translate(80,470)">
-    <rect width="1040" height="100" rx="12" fill="#141417" stroke="rgba(255,255,255,0.08)"/>
-    <text x="24" y="44" font-size="18" fill="#71717A" font-family="sans-serif">当前工具实时运行于内嵌窗口 ↑</text>
-    <text x="24" y="76" font-size="16" fill="#5E6AD2" font-family="sans-serif">切换标签即换工具，无需打开新页面</text>
-  </g>
-  <text x="1120" y="600" text-anchor="end" font-size="18" fill="#71717A" font-family="sans-serif">single-file · zero-dep · local-first</text>
+  <line x1="80" y1="560" x2="1120" y2="560" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1"/>
+  <text x="80" y="598" fill="#71717A" font-size="22">单文件 · 零依赖 · 本地优先</text>
+  <text x="1120" y="598" text-anchor="end" fill="#5E6AD2" font-size="22" font-weight="700">nano-tools</text>
 </svg>
