@@ -161,7 +161,8 @@ if(typeof window!=='undefined'){
     {id:"SnipForge", name:"SnipForge", icon:"snip", cat:"效率", desc:"本地优先代码片段管理器：分类标签、全文搜索、一键复制、JSON 导入导出，离线可用。", tags:["snippet","code","search","productivity","offline"]},
     {id:"PlanForge", name:"PlanForge", icon:"plan", cat:"效率", desc:"本地优先甘特图 / 路线图规划器：任务依赖里程碑进度追踪，导出 PNG/SVG/JSON，离线可用。", tags:["gantt","roadmap","planning","timeline","offline"]},
     {id:"FontForge", name:"FontForge", icon:"font", cat:"设计工具", desc:"本地优先字体预览与排版样张工作台：拖入字体即时渲染，调节字号/行高/字重，字形表与样张导出，离线可用。", tags:["font","typography","specimen","preview"]},
-    {id:"ImageForge", name:"ImageForge", icon:"image", cat:"设计工具", desc:"离线图片编辑器：裁剪、缩放、旋转翻转、亮度/对比度/饱和度/色相/模糊调整、滤镜，导出 PNG/JPEG/WebP，零上传。", tags:["image","editor","crop","resize","filter","offline"]}
+    {id:"ImageForge", name:"ImageForge", icon:"image", cat:"设计工具", desc:"离线图片编辑器：裁剪、缩放、旋转翻转、亮度/对比度/饱和度/色相/模糊调整、滤镜，导出 PNG/JPEG/WebP，零上传。", tags:["image","editor","crop","resize","filter","offline"]},
+    {id:"AudioForge", name:"AudioForge", icon:"audio", cat:"媒体工具", desc:"离线音频编辑器：加载音频、波形预览、裁剪、增益、淡入淡出、归一化、反转，导出 WAV，零上传。", tags:["audio","editor","trim","wav","offline","media"]}
   ];
   var ICONS = {
     regex:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
@@ -203,7 +204,8 @@ if(typeof window!=='undefined'){
     mind:'<circle cx="5" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.2"/><circle cx="18" cy="18" r="2.2"/><path d="M7.2 11 15.8 6.8M7.2 13 15.8 17.2"/>',
     snip:'<path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5a2 2 0 0 0 2 2h1"/><path d="M16 3h1a2 2 0 0 1 2 2v5a2 2 0 0 0 2 2 2 2 0 0 0-2 2v5a2 2 0 0 1-2 2h-1"/>',
     plan:'<path d="M4 6h10"/><path d="M4 11h14"/><path d="M4 16h7"/><path d="M17 3v18"/>',
-    font:'<path d="M6 19h12"/><path d="M12 4l4 15"/><path d="M12 4 8 19"/><path d="M9.5 13h5"/>'
+    font:'<path d="M6 19h12"/><path d="M12 4l4 15"/><path d="M12 4 8 19"/><path d="M9.5 13h5"/>',
+    audio:'<path d="M4 9v6M8 5v14M12 8v8M16 4v16M20 10v4"/>'
   };
   function iconSvg(k){ return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+(ICONS[k]||"")+'</svg>'; }
 
