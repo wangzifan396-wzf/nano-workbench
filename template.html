@@ -177,7 +177,14 @@ if(typeof window!=='undefined'){
     {id:"EnvForge", name:"EnvForge", icon:"env", cat:"实用计算", badge:"新", desc:"离线 .env 解析 / 对比 / 校验：引用展开、双配置差异、必填校验。", tags:["dotenv","env","config"]},
     {id:"UrlForge", name:"UrlForge", icon:"url", cat:"网络工具", badge:"新", desc:"离线 URL 工具箱：解析、编码/解码、查询参数构建与排序、Slug 生成、规范化。", tags:["url","parser","slug","query"]},
     {id:"CaseForge", name:"CaseForge", icon:"case", cat:"文本处理", badge:"新", desc:"离线文本大小写转换与行工具：camelCase/snake_case/kebab-case、去重、排序、加前缀与行号。", tags:["case","text","transform","lines"]},
-    {id:"YamlForge", name:"YamlForge", icon:"yaml", cat:"数据工具", badge:"新", desc:"离线 YAML ⇄ JSON 转换器：块级映射/序列、嵌套、类型推断、带引号标量。", tags:["yaml","json","converter"]}
+    {id:"YamlForge", name:"YamlForge", icon:"yaml", cat:"数据工具", badge:"新", desc:"离线 YAML ⇄ JSON 转换器：块级映射/序列、嵌套、类型推断、带引号标量。", tags:["yaml","json","converter"]},
+    {id:"AuthForge", name:"AuthForge", icon:"auth", cat:"编码加密", badge:"旗舰", desc:"离线 TOTP 身份验证器：自写 SHA1/HMAC-SHA1/RFC6238，生成 2FA 动态验证码与密钥。", tags:["totp","2fa","authenticator","otp"]},
+    {id:"CryptoForge", name:"CryptoForge", icon:"crypto", cat:"编码加密", badge:"旗舰", desc:"本地 AES-GCM 加密与解密：Web Crypto + PBKDF2 派生密钥、随机盐与 IV 打包。", tags:["aes","encrypt","crypto"]},
+    {id:"BarcodeForge", name:"BarcodeForge", icon:"barcode", cat:"设计创意", badge:"旗舰", desc:"离线一维条码生成器：Code 128 / EAN-13 / UPC-A，含校验位，矢量 SVG 导出。", tags:["barcode","code128","ean13"]},
+    {id:"LicenseForge", name:"LicenseForge", icon:"license", cat:"编码加密", badge:"新", desc:"离线开源许可证生成器：MIT/BSD-3/ISC/Apache-2.0/Unlicense 全文，填充年份与版权人。", tags:["license","mit","oss"]},
+    {id:"GitignoreForge", name:"GitignoreForge", icon:"gitignore", cat:"编码加密", badge:"新", desc:"离线 .gitignore 模板组合器：21 种语言/框架/编辑器模板多选合并，一键下载。", tags:["gitignore","template","vcs"]},
+    {id:"ExifForge", name:"ExifForge", icon:"exif", cat:"设计创意", badge:"新", desc:"离线图片 EXIF 元数据查看与清除：解析 JPEG APP1 / TIFF IFD，一键剥离隐私信息。", tags:["exif","metadata","privacy"]},
+    {id:"LoremForge", name:"LoremForge", icon:"lorem", cat:"文本处理", badge:"新", desc:"离线 Lorem ipsum 占位文本生成器：可复现种子、段落/句数可调、可选 Lorem 开头。", tags:["lorem","placeholder","text"]}
   ];
   var ICONS = {
     regex:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
@@ -235,7 +242,14 @@ if(typeof window!=='undefined'){
     env:'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h7"/>',
     url:'<path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/>',
     case:'<path d="M7 4 4 7l3 3"/><path d="M4 7h12"/><path d="M17 20l3-3-3-3"/><path d="M20 17H8"/>',
-    yaml:'<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/>'
+    yaml:'<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/>',
+    auth:'<rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><path d="M12 14v3"/>',
+    crypto:'<rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/><circle cx="12" cy="16" r="1.6"/>',
+    barcode:'<path d="M4 5v14M7 5v14M9.5 5v14M12 5v14M14.5 5v14M17 5v14M20 5v14" stroke-width="1.4"/>',
+    license:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><circle cx="12" cy="13" r="2.2"/><path d="M10.6 14.6 9 19l3-1.4L15 19l-1.6-4.4"/>',
+    gitignore:'<circle cx="12" cy="12" r="9"/><path d="M5.6 5.6 18.4 18.4"/><path d="M8.5 12h7"/>',
+    exif:'<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2.2"/><path d="M3 17l5-4 3 2 4-3 6 5"/>',
+    lorem:'<path d="M4 6h16M4 10h16M4 14h11M4 18h7"/>'
   };
   function iconSvg(k){ return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+(ICONS[k]||"")+'</svg>'; }
 
