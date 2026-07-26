@@ -202,7 +202,11 @@ if(typeof window!=='undefined'){
     {id:"DockerForge", name:"DockerForge", icon:"docker", cat:"开发辅助", badge:"新", desc:"离线 docker run 转 compose。", tags:["docker","compose","devops"]},
     {id:"CurlForge", name:"CurlForge", icon:"curl", cat:"网络", badge:"新", desc:"离线 curl 命令生成器。", tags:["curl","http","api"]},
     {id:"MetaForge", name:"MetaForge", icon:"meta", cat:"开发", badge:"新", desc:"离线 Meta / OG / Twitter 标签生成。", tags:["meta","seo","opengraph"]},
-    {id:"UAForge", name:"UAForge", icon:"ua", cat:"网络", badge:"新", desc:"离线 User-Agent 解析器。", tags:["user-agent","browser","parser"]}
+    {id:"UAForge", name:"UAForge", icon:"ua", cat:"网络", badge:"新", desc:"离线 User-Agent 解析器。", tags:["user-agent","browser","parser"]},
+    {id:"DiffForge", name:"DiffForge", icon:"diff2", cat:"文本处理", badge:"旗舰", desc:"离线文本差异对比：行级 LCS diff + 并排视图。", tags:["diff","lcs","compare"]},
+    {id:"ShotForge", name:"ShotForge", icon:"shot", cat:"开发", badge:"旗舰", desc:"离线代码截图生成器：语法高亮 + 窗口外观，导出 SVG/PNG。", tags:["code","screenshot","highlight"]},
+    {id:"TotpForge", name:"TotpForge", icon:"totp", cat:"编码加密", badge:"旗舰", desc:"离线 TOTP 身份验证器：纯 JS HMAC-SHA1（RFC 6238）。", tags:["totp","otp","2fa"]},
+    {id:"HexForge", name:"HexForge", icon:"hex", cat:"编码加密", badge:"旗舰", desc:"离线十六进制查看器：文本/十六进制/文件 → xxd dump。", tags:["hex","dump","binary"]}
   ];
   var ICONS = {
     regex:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
@@ -285,7 +289,11 @@ if(typeof window!=='undefined'){
     docker:'<rect x="3" y="11" width="4" height="4"/><rect x="8" y="11" width="4" height="4"/><rect x="13" y="11" width="4" height="4"/><rect x="8" y="6" width="4" height="4"/><path d="M2 18c3 2 14 3 20-4"/>',
     curl:'<path d="M4 17l6-5-6-5M12 19h8"/>',
     meta:'<path d="M8 6l-5 6 5 6M16 6l5 6-5 6M13 4l-2 16"/>',
-    ua:'<rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M8 9a4 4 0 018 0"/>'
+    ua:'<rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M8 9a4 4 0 018 0"/>',
+    diff2:'<rect x="3" y="4" width="8" height="16" rx="1"/><rect x="13" y="4" width="8" height="16" rx="1"/><path d="M6 9h2M6 12h2M16 9h2"/>',
+    shot:'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 8h18"/><circle cx="6" cy="6" r="1"/><circle cx="9" cy="6" r="1"/><path d="M7 12h6M7 15h10"/>',
+    totp:'<circle cx="8" cy="8" r="4"/><path d="M11 11l8 8M16 16l2-2M19 19l1-1"/>',
+    hex:'<rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 8h.01M12 8h.01M16 8h.01M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/>'
   };
   function iconSvg(k){ return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+(ICONS[k]||"")+'</svg>'; }
 
