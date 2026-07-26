@@ -195,7 +195,10 @@ if(typeof window!=='undefined'){
     {id:"TimerForge", name:"TimerForge", icon:"timer", cat:"实用计算", badge:"新", desc:"离线秒表 / 倒计时：精确到 0.1 秒。", tags:["timer","stopwatch","countdown"]},
     {id:"TypeForge", name:"TypeForge", icon:"type", cat:"开发", badge:"旗舰", desc:"离线 JSON → TypeScript 接口生成。", tags:["typescript","json","interface"]},
     {id:"GradientForge", name:"GradientForge", icon:"gradient", cat:"设计创意", badge:"新", desc:"离线 CSS 渐变构建器：多色标实时预览。", tags:["css","gradient","design"]},
-    {id:"LinesForge", name:"LinesForge", icon:"lines", cat:"文本处理", badge:"新", desc:"离线文本行工具：去重 / 排序 / 编号。", tags:["text","lines","dedupe"]}
+    {id:"LinesForge", name:"LinesForge", icon:"lines", cat:"文本处理", badge:"新", desc:"离线文本行工具：去重 / 排序 / 编号。", tags:["text","lines","dedupe"]},
+    {id:"HttpForge", name:"HttpForge", icon:"http", cat:"网络", badge:"新", desc:"离线 HTTP 速查：状态码 / 方法 / MIME。", tags:["http","status-code","mime"]},
+    {id:"UnicodeForge", name:"UnicodeForge", icon:"unicode", cat:"编码加密", badge:"新", desc:"离线 Unicode 检查器：转义 / 码点 / UTF-8 / 实体。", tags:["unicode","utf8","escape"]},
+    {id:"ChmodForge", name:"ChmodForge", icon:"chmod", cat:"开发辅助", badge:"新", desc:"离线权限计算器：八进制 与 rwx 互转。", tags:["chmod","permission","unix"]}
   ];
   var ICONS = {
     regex:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
@@ -271,7 +274,10 @@ if(typeof window!=='undefined'){
     timer:'<circle cx="12" cy="13" r="7"/><path d="M12 13V9M9 3h6"/>',
     type:'<path d="M4 7V5h16v2M9 5v14M7 19h4"/><path d="M14 12h6v1.5M17 12v7M15.5 19h3"/>',
     gradient:'<rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 14l16-8M4 19l16-8"/>',
-    lines:'<path d="M4 6h16M4 12h10M4 18h16"/>'
+    lines:'<path d="M4 6h16M4 12h10M4 18h16"/>',
+    http:'<path d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18"/><circle cx="12" cy="12" r="9"/>',
+    unicode:'<path d="M6 5v9a4 4 0 008 0V5"/><path d="M17 5v14M14 8l3-3 3 3"/>',
+    chmod:'<rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/>'
   };
   function iconSvg(k){ return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+(ICONS[k]||"")+'</svg>'; }
 
