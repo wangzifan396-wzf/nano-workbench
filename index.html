@@ -171,7 +171,10 @@ if(typeof window!=='undefined'){
     {id:"CVForge", name:"CVForge", icon:"cv", cat:"效率工具", desc:"离线简历 / CV 工作台：实时预览、三种模板、打印导出 PDF、JSON 导入导出。", tags:["resume","cv","pdf"]},
     {id:"KanbanForge", name:"KanbanForge", icon:"kanban", cat:"效率工具", badge:"新", desc:"离线看板：多列拖拽卡片、优先级标签搜索，导出 Markdown / JSON。", tags:["kanban","task","board"]},
     {id:"InvoiceForge", name:"InvoiceForge", icon:"invoice", cat:"效率工具", badge:"新", desc:"离线发票 / 报价单：行项目计税、人民币大写金额、打印导出 PDF。", tags:["invoice","quote","pdf"]},
-    {id:"TimeForge", name:"TimeForge", icon:"time", cat:"实用计算", badge:"新", desc:"时间戳 ⇄ 日期互转、6 时区对照、日期差与人性化时长。", tags:["timestamp","timezone","date"]}
+    {id:"TimeForge", name:"TimeForge", icon:"time", cat:"实用计算", badge:"新", desc:"时间戳 ⇄ 日期互转、6 时区对照、日期差与人性化时长。", tags:["timestamp","timezone","date"]},
+    {id:"UuidForge", name:"UuidForge", icon:"uuid", cat:"编码加密", badge:"新", desc:"离线 UUID / nanoid 生成器：v4 随机、v7 时间有序、v5 命名空间哈希、批量与校验。", tags:["uuid","nanoid","crypto"]},
+    {id:"SubnetForge", name:"SubnetForge", icon:"subnet", cat:"网络工具", badge:"新", desc:"离线 IPv4/IPv6 CIDR 子网计算器：网络/广播地址、可用主机、拆分与归属。", tags:["ipv4","ipv6","cidr","network"]},
+    {id:"EnvForge", name:"EnvForge", icon:"env", cat:"实用计算", badge:"新", desc:"离线 .env 解析 / 对比 / 校验：引用展开、双配置差异、必填校验。", tags:["dotenv","env","config"]}
   ];
   var ICONS = {
     regex:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
@@ -223,7 +226,10 @@ if(typeof window!=='undefined'){
     cv:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h6M8 9h2"/>',
     kanban:'<rect x="3" y="3" width="5" height="18" rx="1"/><rect x="10" y="3" width="5" height="12" rx="1"/><rect x="17" y="3" width="5" height="8" rx="1"/>',
     invoice:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/><path d="M12 9h4"/>',
-    time:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>'
+    time:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>',
+    uuid:'<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>',
+    subnet:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>',
+    env:'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h7"/>'
   };
   function iconSvg(k){ return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+(ICONS[k]||"")+'</svg>'; }
 
