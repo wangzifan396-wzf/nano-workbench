@@ -165,7 +165,8 @@ if(typeof window!=='undefined'){
     {id:"AudioForge", name:"AudioForge", icon:"audio", cat:"媒体工具", desc:"离线音频编辑器：加载音频、波形预览、裁剪、增益、淡入淡出、归一化、反转，导出 WAV，零上传。", tags:["audio","editor","trim","wav","offline","media"]},
     {id:"A11yForge", name:"A11yForge", icon:"a11y", cat:"开发工具", desc:"离线无障碍工具箱：WCAG 对比度检查、合规取色、色盲模拟、HTML/ARIA 审计，零上传。", tags:["a11y","accessibility","wcag","contrast","audit","offline"]},
     {id:"JwtForge", name:"JwtForge", icon:"jwt", cat:"编码加密", desc:"离线 JWT / Token 解码器：拆分 header、payload、signature，可读化 exp/nbf/iat，不校验签名。", tags:["jwt","token","decode","security","offline"]},
-    {id:"PromptForge", name:"PromptForge", icon:"prompt", cat:"AI 效率", badge:"新", desc:"本地优先 AI Prompt 工作台：变量模板、实时预览、BYOK 直连大模型、成本估算与本地历史，密钥永不离机。", tags:["prompt","llm","byok","ai"]}
+    {id:"PromptForge", name:"PromptForge", icon:"prompt", cat:"AI 效率", badge:"新", desc:"本地优先 AI Prompt 工作台：变量模板、实时预览、BYOK 直连大模型、成本估算与本地历史，密钥永不离机。", tags:["prompt","llm","byok","ai"]},
+    {id:"PDFForge", name:"PDFForge", icon:"pdf", cat:"图像与媒体", desc:"本地优先 PDF 工具箱：合并、拆分、旋转、重排、优化重存，文件永不上传。", tags:["pdf","merge","split","rotate","local"]}
   ];
   var ICONS = {
     regex:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
@@ -211,7 +212,8 @@ if(typeof window!=='undefined'){
     font:'<path d="M6 19h12"/><path d="M12 4l4 15"/><path d="M12 4 8 19"/><path d="M9.5 13h5"/>',
     audio:'<path d="M4 9v6M8 5v14M12 8v8M16 4v16M20 10v4"/>',
     a11y:'<circle cx="12" cy="4" r="2"/><path d="M8 21h8"/><path d="M12 6v6"/><path d="M9 17a3 3 0 0 0 6 0"/>',
-    jwt:'<rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V8a5 5 0 0 1 10 0v3"/><circle cx="12" cy="16" r="1.5"/>'
+    jwt:'<rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V8a5 5 0 0 1 10 0v3"/><circle cx="12" cy="16" r="1.5"/>',
+    pdf:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2.5L17.5 8H14V4.5zM8 13h8v1.5H8V13zm0 3h8v1.5H8V16z"/>'
   };
   function iconSvg(k){ return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+(ICONS[k]||"")+'</svg>'; }
 
