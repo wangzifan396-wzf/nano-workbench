@@ -184,7 +184,15 @@ if(typeof window!=='undefined'){
     {id:"LicenseForge", name:"LicenseForge", icon:"license", cat:"编码加密", badge:"新", desc:"离线开源许可证生成器：MIT/BSD-3/ISC/Apache-2.0/Unlicense 全文，填充年份与版权人。", tags:["license","mit","oss"]},
     {id:"GitignoreForge", name:"GitignoreForge", icon:"gitignore", cat:"编码加密", badge:"新", desc:"离线 .gitignore 模板组合器：21 种语言/框架/编辑器模板多选合并，一键下载。", tags:["gitignore","template","vcs"]},
     {id:"ExifForge", name:"ExifForge", icon:"exif", cat:"设计创意", badge:"新", desc:"离线图片 EXIF 元数据查看与清除：解析 JPEG APP1 / TIFF IFD，一键剥离隐私信息。", tags:["exif","metadata","privacy"]},
-    {id:"LoremForge", name:"LoremForge", icon:"lorem", cat:"文本处理", badge:"新", desc:"离线 Lorem ipsum 占位文本生成器：可复现种子、段落/句数可调、可选 Lorem 开头。", tags:["lorem","placeholder","text"]}
+    {id:"LoremForge", name:"LoremForge", icon:"lorem", cat:"文本处理", badge:"新", desc:"离线 Lorem ipsum 占位文本生成器：可复现种子、段落/句数可调、可选 Lorem 开头。", tags:["lorem","placeholder","text"]},
+    {id:"CsvForge", name:"CsvForge", icon:"csv", cat:"数据工具", badge:"旗舰", desc:"离线 CSV 工具箱：解析 / 转 JSON / 转置 / 概览。", tags:["csv","json","convert"]},
+    {id:"CipherForge", name:"CipherForge", icon:"cipher", cat:"安全", badge:"旗舰", desc:"离线经典密码：凯撒 / 维吉尼亚 / ROT13 / Atbash。", tags:["cipher","caesar","crypto"]},
+    {id:"AsciiForge", name:"AsciiForge", icon:"ascii", cat:"文本处理", badge:"旗舰", desc:"离线 ASCII 艺术：横幅 / 文本框 / 黑客语。", tags:["ascii","banner","art"]},
+    {id:"AvatarForge", name:"AvatarForge", icon:"avatar", cat:"设计创意", badge:"新", desc:"离线身份图标：种子生成确定性 identicon。", tags:["avatar","identicon","svg"]},
+    {id:"FaviconForge", name:"FaviconForge", icon:"favicon", cat:"设计创意", badge:"新", desc:"离线 Favicon：文字 / Emoji → SVG。", tags:["favicon","icon","svg"]},
+    {id:"XmlForge", name:"XmlForge", icon:"xml", cat:"数据工具", badge:"新", desc:"离线 XML：格式化 / 结构校验。", tags:["xml","format","validate"]},
+    {id:"HtmlForge", name:"HtmlForge", icon:"html", cat:"开发", badge:"新", desc:"离线 HTML：压缩 / 格式化 / 转义。", tags:["html","minify","format"]},
+    {id:"TimerForge", name:"TimerForge", icon:"timer", cat:"实用计算", badge:"新", desc:"离线秒表 / 倒计时：精确到 0.1 秒。", tags:["timer","stopwatch","countdown"]}
   ];
   var ICONS = {
     regex:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
@@ -249,7 +257,15 @@ if(typeof window!=='undefined'){
     license:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><circle cx="12" cy="13" r="2.2"/><path d="M10.6 14.6 9 19l3-1.4L15 19l-1.6-4.4"/>',
     gitignore:'<circle cx="12" cy="12" r="9"/><path d="M5.6 5.6 18.4 18.4"/><path d="M8.5 12h7"/>',
     exif:'<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2.2"/><path d="M3 17l5-4 3 2 4-3 6 5"/>',
-    lorem:'<path d="M4 6h16M4 10h16M4 14h11M4 18h7"/>'
+    lorem:'<path d="M4 6h16M4 10h16M4 14h11M4 18h7"/>',
+    csv:'<rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16M4 15h16M10 4v16M15 4v16"/>',
+    cipher:'<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',
+    ascii:'<path d="M8 18 12 6l4 12M9.2 14h5.6"/>',
+    avatar:'<circle cx="12" cy="9" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/>',
+    favicon:'<rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="12" cy="12" r="3"/>',
+    xml:'<path d="M7 5l-5 7 5 7M17 5l5 7-5 7"/>',
+    html:'<path d="M4 6l4 12 4-12M14 18h6"/>',
+    timer:'<circle cx="12" cy="13" r="7"/><path d="M12 13V9M9 3h6"/>'
   };
   function iconSvg(k){ return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+(ICONS[k]||"")+'</svg>'; }
 
