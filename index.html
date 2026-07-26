@@ -192,7 +192,10 @@ if(typeof window!=='undefined'){
     {id:"FaviconForge", name:"FaviconForge", icon:"favicon", cat:"设计创意", badge:"新", desc:"离线 Favicon：文字 / Emoji → SVG。", tags:["favicon","icon","svg"]},
     {id:"XmlForge", name:"XmlForge", icon:"xml", cat:"数据工具", badge:"新", desc:"离线 XML：格式化 / 结构校验。", tags:["xml","format","validate"]},
     {id:"HtmlForge", name:"HtmlForge", icon:"html", cat:"开发", badge:"新", desc:"离线 HTML：压缩 / 格式化 / 转义。", tags:["html","minify","format"]},
-    {id:"TimerForge", name:"TimerForge", icon:"timer", cat:"实用计算", badge:"新", desc:"离线秒表 / 倒计时：精确到 0.1 秒。", tags:["timer","stopwatch","countdown"]}
+    {id:"TimerForge", name:"TimerForge", icon:"timer", cat:"实用计算", badge:"新", desc:"离线秒表 / 倒计时：精确到 0.1 秒。", tags:["timer","stopwatch","countdown"]},
+    {id:"TypeForge", name:"TypeForge", icon:"type", cat:"开发", badge:"旗舰", desc:"离线 JSON → TypeScript 接口生成。", tags:["typescript","json","interface"]},
+    {id:"GradientForge", name:"GradientForge", icon:"gradient", cat:"设计创意", badge:"新", desc:"离线 CSS 渐变构建器：多色标实时预览。", tags:["css","gradient","design"]},
+    {id:"LinesForge", name:"LinesForge", icon:"lines", cat:"文本处理", badge:"新", desc:"离线文本行工具：去重 / 排序 / 编号。", tags:["text","lines","dedupe"]}
   ];
   var ICONS = {
     regex:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
@@ -265,7 +268,10 @@ if(typeof window!=='undefined'){
     favicon:'<rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="12" cy="12" r="3"/>',
     xml:'<path d="M7 5l-5 7 5 7M17 5l5 7-5 7"/>',
     html:'<path d="M4 6l4 12 4-12M14 18h6"/>',
-    timer:'<circle cx="12" cy="13" r="7"/><path d="M12 13V9M9 3h6"/>'
+    timer:'<circle cx="12" cy="13" r="7"/><path d="M12 13V9M9 3h6"/>',
+    type:'<path d="M4 7V5h16v2M9 5v14M7 19h4"/><path d="M14 12h6v1.5M17 12v7M15.5 19h3"/>',
+    gradient:'<rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 14l16-8M4 19l16-8"/>',
+    lines:'<path d="M4 6h16M4 12h10M4 18h16"/>'
   };
   function iconSvg(k){ return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+(ICONS[k]||"")+'</svg>'; }
 
