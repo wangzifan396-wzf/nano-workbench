@@ -222,7 +222,8 @@ if(typeof window!=='undefined'){
     {id:"KeyForge", name:"KeyForge", icon:"keyboard", cat:"开发辅助", badge:"旗舰", desc:"按键侦测：key / code / keyCode 实时显示。", tags:["keyboard","keycode","event"]},
     {id:"LuhnForge", name:"LuhnForge", icon:"card", cat:"开发辅助", badge:"旗舰", desc:"Luhn 校验：卡号校验 + 卡组织识别。", tags:["luhn","credit-card","validate"]},
     {id:"DiagramForge", name:"DiagramForge", icon:"flow", cat:"可视化", badge:"旗舰", desc:"流程图：节点+连线绘图，导出 SVG/JSON。", tags:["diagram","flowchart","drawio"]},
-    {id:"CodeForge", name:"CodeForge", icon:"code", cat:"开发辅助", badge:"旗舰", desc:"前端游乐场：三栏编辑 + 沙箱实时预览 + 控制台。", tags:["playground","codepen","sandbox"]}
+    {id:"CodeForge", name:"CodeForge", icon:"code", cat:"开发辅助", badge:"旗舰", desc:"前端游乐场：三栏编辑 + 沙箱实时预览 + 控制台。", tags:["playground","codepen","sandbox"]},
+    {id:"PixelForge", name:"PixelForge", icon:"pixel", cat:"可视化", badge:"旗舰", desc:"像素画/精灵图编辑器：多帧动画+洋葱皮，导出 PNG/雪碧图。", tags:["pixel","sprite","animation"]}
   ];
   var ICONS = {
     regex:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
@@ -324,7 +325,8 @@ if(typeof window!=='undefined'){
     mime:'<path d="M8 4H6a2 2 0 00-2 2v3M16 4h2a2 2 0 012 2v3M8 20H6a2 2 0 01-2-2v-3M16 20h2a2 2 0 002-2v-3"/>',
     morse:'<circle cx="5" cy="12" r="1.5"/><circle cx="10" cy="12" r="1.5"/><path d="M14 12h6"/><path d="M4 18h6M14 18h2"/><circle cx="19" cy="18" r="1.5"/><path d="M4 6h3M11 6h9"/>',
     keyboard:'<rect x="3" y="7" width="18" height="11" rx="2"/><path d="M7 11h.01M11 11h.01M15 11h.01M7 14h.01M11 14h.01M15 14h.01M8 17h8" stroke-linecap="round"/>',
-    card:'<rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/>'
+    card:'<rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/>',
+    pixel:'<rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><rect x="14" y="14" width="6" height="6"/>'
   };
   function iconSvg(k){ return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+(ICONS[k]||"")+'</svg>'; }
 
