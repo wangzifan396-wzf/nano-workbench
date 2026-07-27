@@ -213,7 +213,11 @@ if(typeof window!=='undefined'){
     {id:"WordForge", name:"WordForge", icon:"word", cat:"文本", badge:"旗舰", desc:"离线文本统计：字数/词数/行数/阅读时长。", tags:["text","stats","count"]},
     {id:"StructForge", name:"StructForge", icon:"struct", cat:"开发辅助", badge:"旗舰", desc:"JSON 转 TypeScript / Go / Python / JSON Schema。", tags:["json","typescript","codegen"]},
     {id:"SlugForge", name:"SlugForge", icon:"slug", cat:"文本", badge:"旗舰", desc:"URL Slug 生成：变音折叠 / 批量 / 可配置。", tags:["slug","url","seo"]},
-    {id:"GlobForge", name:"GlobForge", icon:"glob", cat:"开发辅助", badge:"旗舰", desc:"Glob 模式测试：* / ** / ? / [] / {} 实时匹配。", tags:["glob","pattern","match"]}
+    {id:"GlobForge", name:"GlobForge", icon:"glob", cat:"开发辅助", badge:"旗舰", desc:"Glob 模式测试：* / ** / ? / [] / {} 实时匹配。", tags:["glob","pattern","match"]},
+    {id:"RomanForge", name:"RomanForge", icon:"roman", cat:"文本", badge:"旗舰", desc:"罗马数字：阿拉伯 ↔ 罗马互转，规范形校验。", tags:["roman","numeral","convert"]},
+    {id:"TempForge", name:"TempForge", icon:"temp", cat:"文本", badge:"旗舰", desc:"温度换算：℃/℉/K/°R 四标度互转。", tags:["temperature","convert","celsius"]},
+    {id:"MathForge", name:"MathForge", icon:"math", cat:"开发辅助", badge:"旗舰", desc:"数学表达式求值：安全无 eval，函数与常量。", tags:["math","expression","evaluate"]},
+    {id:"MimeForge", name:"MimeForge", icon:"mime", cat:"开发辅助", badge:"旗舰", desc:"MIME 查询：扩展名 ↔ 类型双向映射。", tags:["mime","content-type","lookup"]}
   ];
   var ICONS = {
     regex:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
@@ -307,7 +311,11 @@ if(typeof window!=='undefined'){
     word:'<path d="M4 7h16M4 12h16M4 17h10"/>',
     struct:'<path d="M8 4H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h3M16 4h3a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-3M12 8v8M9 11l3-3 3 3"/>',
     slug:'<path d="M9 15l6-6M10.5 6.5l1-1a3.5 3.5 0 0 1 5 5l-1 1M13.5 17.5l-1 1a3.5 3.5 0 0 1-5-5l1-1"/>',
-    glob:'<path d="M4 6h16M4 12h10M4 18h7M17 13l4 4M21 13l-4 4"/>'
+    glob:'<path d="M4 6h16M4 12h10M4 18h7M17 13l4 4M21 13l-4 4"/>',
+    roman:'<path d="M9 5v14M9 5h3M9 19h3M14 5l2 7-2 7"/>',
+    temp:'<path d="M14 14V5a2 2 0 00-4 0v9a4 4 0 104 0z"/><path d="M12 9v5"/>',
+    math:'<path d="M5 5h10l-4 7 4 7H5"/>',
+    mime:'<path d="M8 4H6a2 2 0 00-2 2v3M16 4h2a2 2 0 012 2v3M8 20H6a2 2 0 01-2-2v-3M16 20h2a2 2 0 002-2v-3"/>'
   };
   function iconSvg(k){ return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+(ICONS[k]||"")+'</svg>'; }
 
