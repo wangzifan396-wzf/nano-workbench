@@ -223,7 +223,8 @@ if(typeof window!=='undefined'){
     {id:"LuhnForge", name:"LuhnForge", icon:"card", cat:"开发辅助", badge:"旗舰", desc:"Luhn 校验：卡号校验 + 卡组织识别。", tags:["luhn","credit-card","validate"]},
     {id:"DiagramForge", name:"DiagramForge", icon:"flow", cat:"可视化", badge:"旗舰", desc:"流程图：节点+连线绘图，导出 SVG/JSON。", tags:["diagram","flowchart","drawio"]},
     {id:"CodeForge", name:"CodeForge", icon:"code", cat:"开发辅助", badge:"旗舰", desc:"前端游乐场：三栏编辑 + 沙箱实时预览 + 控制台。", tags:["playground","codepen","sandbox"]},
-    {id:"PixelForge", name:"PixelForge", icon:"pixel", cat:"可视化", badge:"旗舰", desc:"像素画/精灵图编辑器：多帧动画+洋葱皮，导出 PNG/雪碧图。", tags:["pixel","sprite","animation"]}
+    {id:"PixelForge", name:"PixelForge", icon:"pixel", cat:"可视化", badge:"旗舰", desc:"像素画/精灵图编辑器：多帧动画+洋葱皮，导出 PNG/雪碧图。", tags:["pixel","sprite","animation"]},
+    {id:"GIFForge", name:"GIFForge", icon:"gif", cat:"可视化", badge:"旗舰", desc:"GIF 动画制作器：图片/雪碧图成帧，纯 JS GIF89a 编码导出。", tags:["gif","animation","encoder"]}
   ];
   var ICONS = {
     regex:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
@@ -326,7 +327,8 @@ if(typeof window!=='undefined'){
     morse:'<circle cx="5" cy="12" r="1.5"/><circle cx="10" cy="12" r="1.5"/><path d="M14 12h6"/><path d="M4 18h6M14 18h2"/><circle cx="19" cy="18" r="1.5"/><path d="M4 6h3M11 6h9"/>',
     keyboard:'<rect x="3" y="7" width="18" height="11" rx="2"/><path d="M7 11h.01M11 11h.01M15 11h.01M7 14h.01M11 14h.01M15 14h.01M8 17h8" stroke-linecap="round"/>',
     card:'<rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/>',
-    pixel:'<rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><rect x="14" y="14" width="6" height="6"/>'
+    pixel:'<rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><rect x="14" y="14" width="6" height="6"/>',
+    gif:'<rect x="3" y="5" width="18" height="14" rx="3"/><path d="M9.5 10.5H7.8a1.3 1.3 0 0 0-1.3 1.3v.4a1.3 1.3 0 0 0 1.3 1.3h1.7v-1.6H8.6M12 10.5v3M14.5 13.5v-3h3M14.5 12h2"/>'
   };
   function iconSvg(k){ return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+(ICONS[k]||"")+'</svg>'; }
 
