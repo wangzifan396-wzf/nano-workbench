@@ -210,7 +210,10 @@ if(typeof window!=='undefined'){
     {id:"BookForge", name:"BookForge", icon:"book", cat:"网络", badge:"旗舰", desc:"离线书签生成器：JavaScript 一键转书签，可反向解析。", tags:["bookmarklet","bookmark","javascript"]},
     {id:"StatusForge", name:"StatusForge", icon:"status", cat:"网络", badge:"旗舰", desc:"离线 HTTP 状态码速查：1xx–5xx 搜索与分类。", tags:["http","status","code"]},
     {id:"EmojiForge", name:"EmojiForge", icon:"emoji", cat:"文本", badge:"旗舰", desc:"离线 emoji 速查：关键词/分组搜索，点击即复制。", tags:["emoji","unicode","symbol"]},
-    {id:"WordForge", name:"WordForge", icon:"word", cat:"文本", badge:"旗舰", desc:"离线文本统计：字数/词数/行数/阅读时长。", tags:["text","stats","count"]}
+    {id:"WordForge", name:"WordForge", icon:"word", cat:"文本", badge:"旗舰", desc:"离线文本统计：字数/词数/行数/阅读时长。", tags:["text","stats","count"]},
+    {id:"StructForge", name:"StructForge", icon:"struct", cat:"开发辅助", badge:"旗舰", desc:"JSON 转 TypeScript / Go / Python / JSON Schema。", tags:["json","typescript","codegen"]},
+    {id:"SlugForge", name:"SlugForge", icon:"slug", cat:"文本", badge:"旗舰", desc:"URL Slug 生成：变音折叠 / 批量 / 可配置。", tags:["slug","url","seo"]},
+    {id:"GlobForge", name:"GlobForge", icon:"glob", cat:"开发辅助", badge:"旗舰", desc:"Glob 模式测试：* / ** / ? / [] / {} 实时匹配。", tags:["glob","pattern","match"]}
   ];
   var ICONS = {
     regex:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
@@ -301,7 +304,10 @@ if(typeof window!=='undefined'){
     book:'<path d="M12 5C10.5 5 9 5.5 9 7v1H7a2 2 0 00-2 2v9a2 2 0 002 2h10a2 2 0 002-2V10a2 2 0 00-2-2h-2V7c0-1.5-1.5-2-3-2z"/><path d="M9 9h6"/>',
     status:'<circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/>',
     emoji:'<circle cx="9" cy="10" r="1"/><circle cx="15" cy="10" r="1"/><path d="M9 15a4 4 0 006 0"/><path d="M5 20a7 7 0 0114 0"/>',
-    word:'<path d="M4 7h16M4 12h16M4 17h10"/>'
+    word:'<path d="M4 7h16M4 12h16M4 17h10"/>',
+    struct:'<path d="M8 4H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h3M16 4h3a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-3M12 8v8M9 11l3-3 3 3"/>',
+    slug:'<path d="M9 15l6-6M10.5 6.5l1-1a3.5 3.5 0 0 1 5 5l-1 1M13.5 17.5l-1 1a3.5 3.5 0 0 1-5-5l1-1"/>',
+    glob:'<path d="M4 6h16M4 12h10M4 18h7M17 13l4 4M21 13l-4 4"/>'
   };
   function iconSvg(k){ return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+(ICONS[k]||"")+'</svg>'; }
 
