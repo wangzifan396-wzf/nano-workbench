@@ -388,7 +388,17 @@ if(typeof window!=='undefined'){
       {id:"WorldClockForge", name:"WorldClockForge", icon:"world", cat:"实用计算", badge:"旗舰", desc:"世界时钟：并排显示多个时区当前时间，自动算时差，基于 Intl 离线可用。", tags:["world","clock","timezone","intl","time"]},
       {id:"CountdownForge", name:"CountdownForge", icon:"countdown", cat:"实用计算", badge:"旗舰", desc:"多倒计时：添加多个目标时刻，实时显示剩余天/时/分/秒，本地保存，离线可用。", tags:["countdown","timer","target","local","event"]},
       {id:"RecipeForge", name:"RecipeForge", icon:"recipe", cat:"效率工具", badge:"旗舰", desc:"食谱管理：录入配料一键按份量缩放，本地保存多个食谱，离线可用。", tags:["recipe","ingredients","scale","cook","local"]},
-      {id:"ExpenseForge", name:"ExpenseForge", icon:"expense", cat:"效率工具", badge:"旗舰", desc:"记账与预算：录入收支、按分类与月份汇总，本地保存，离线可用。", tags:["expense","budget","tracker","finance","local"]}
+      {id:"ExpenseForge", name:"ExpenseForge", icon:"expense", cat:"效率工具", badge:"旗舰", desc:"记账与预算：录入收支、按分类与月份汇总，本地保存，离线可用。", tags:["expense","budget","tracker","finance","local"]},
+      {id:"TimestampForge", name:"TimestampForge", icon:"ts", cat:"实用计算", badge:"旗舰", desc:"Unix 时间戳 ↔ 日期转换：秒 / 毫秒互转、UTC 与本地时间、星期计算，离线可用。", tags:["timestamp","epoch","date","utc","time"]},
+      {id:"PassgenForge", name:"PassgenForge", icon:"passgen", cat:"安全工具", badge:"旗舰", desc:"安全密码生成器：自定义长度与字符集、实时熵估算、浏览器本地随机，离线可用。", tags:["password","generate","entropy","random","security"]},
+      {id:"AgeForge", name:"AgeForge", icon:"age", cat:"实用计算", badge:"旗舰", desc:"年龄与日期差计算：精确到岁 / 月 / 天与合计天数，离线可用。", tags:["age","date","difference","birthday","time"]},
+      {id:"MacForge", name:"MacForge", icon:"mac", cat:"网络", badge:"旗舰", desc:"MAC 地址工具：随机生成 / 校验 / 规范化、单播多播与本地判定、OUI 厂商查询，离线可用。", tags:["mac","address","oui","network","vendor"]},
+      {id:"NanoidForge", name:"NanoidForge", icon:"nid", cat:"开发辅助", badge:"旗舰", desc:"短 ID 与 UUID 生成器：URL 安全 / 十六进制 / 去歧义字符集、UUID v4，离线可用。", tags:["nanoid","uuid","id","random","generator"]},
+      {id:"SitemapForge", name:"SitemapForge", icon:"sm", cat:"开发辅助", badge:"旗舰", desc:"sitemap.xml 生成器：URL 列表一键生成标准站点地图，支持更新频率 / 优先级 / 日期，离线可用。", tags:["sitemap","xml","seo","url","generator"]},
+      {id:"WordCountForge", name:"WordCountForge", icon:"wordcount", cat:"文本处理", badge:"旗舰", desc:"文本字数统计：字符 / 词 / 行 / 句 / 段与预计阅读时间，中英混排，离线可用。", tags:["word","count","text","stats","reading"]},
+      {id:"SqlFmtForge", name:"SqlFmtForge", icon:"sqlfmt", cat:"开发辅助", badge:"旗舰", desc:"SQL 格式化：关键字大写、主要子句换行、保留字符串字面量，离线可用。", tags:["sql","format","pretty","query","dev"]},
+      {id:"CalorieForge", name:"CalorieForge", icon:"cal", cat:"效率工具", badge:"旗舰", desc:"卡路里与营养记账：记录饮食热量与蛋白 / 碳水 / 脂肪，本机保存，离线可用。", tags:["calorie","diet","nutrition","tracker","health"]},
+      {id:"StopwatchForge", name:"StopwatchForge", icon:"sw", cat:"实用计算", badge:"旗舰", desc:"秒表与计圈计时：毫秒精度、暂停 / 继续、圈速最佳最差统计，离线可用。", tags:["stopwatch","timer","lap","clock","time"]}
   ];
   var ICONS = {
     regex:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
@@ -656,112 +666,15 @@ if(typeof window!=='undefined'){
   world:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>',
   countdown:'<circle cx="12" cy="13" r="7"/><path d="M12 13V9M9 3h6"/>',
   recipe:'<path d="M5 4h11a2 2 0 0 1 2 2v14H7a2 2 0 0 1-2-2z"/><path d="M9 8h6M9 12h6"/>',
-  expense:'<rect x="3" y="6" width="18" height="13" rx="2"/><path d="M16 12h3a1 1 0 0 1 0 2h-3M3 9h12"/>'
+  expense:'<rect x="3" y="6" width="18" height="13" rx="2"/><path d="M16 12h3a1 1 0 0 1 0 2h-3M3 9h12"/>',
+  ts:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+  passgen:'<circle cx="8" cy="8" r="4"/><path d="M11 11l9 9"/>',
+  age:'<circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-7 8-7s8 3 8 7"/>',
+  mac:'<rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/>',
+  nid:'<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M14 9h4M14 13h3"/>',
+  sm:'<rect x="4" y="4" width="7" height="5" rx="1"/><rect x="13" y="4" width="7" height="5" rx="1"/><rect x="9" y="15" width="6" height="5" rx="1"/><path d="M7.5 9v3h9v-3M12 12v3"/>',
+  wordcount:'<path d="M4 6h16M4 10h12M4 14h16M4 18h10"/>',
+  sqlfmt:'<ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/>',
+  cal:'<path d="M7 3v8a3 3 0 0 0 6 0V3M10 11v10M17 3c-1.5 2-2 4-2 7s.5 4 2 4v7"/>',
+  sw:'<circle cx="12" cy="13" r="7"/><path d="M12 13V9M9 2h6"/>'
   };
-  function iconSvg(k){ return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+(ICONS[k]||"")+'</svg>'; }
-
-  var I18N={
-    zh:{pick:'从左侧选择一个工具开始',hint:'所有工具都在一个标签页里即时切换，无需反复打开新页面。',
-        search:'搜索工具…',ext:'新标签',toastOpen:'已打开：',newtab:'在新标签打开'},
-    en:{pick:'Pick a tool from the left to start',hint:'All tools switch instantly in one tab — no more reopening pages.',
-        search:'Search tools…',ext:'new tab',toastOpen:'Opened: ',newtab:'Open in new tab'}
-  };
-  var lang=localStorage.getItem('wb_lang')||'zh';
-  var $=function(id){return document.getElementById(id);};
-  var t=function(k){return (I18N[lang]&&I18N[lang][k])||k;};
-  var tabs=[]; // [{id,name}]
-  var activeId=null;
-
-  function applyLang(){
-    document.documentElement.lang=lang==='zh'?'zh-CN':'en';
-    document.querySelectorAll('[data-i18n]').forEach(function(el){el.textContent=t(el.dataset.i18n);});
-    $('search').placeholder=t('search');
-    $('langBtn').textContent=lang==='zh'?'EN':'中';
-    document.title=lang==='zh'?'nano-workbench · 工具工作台':'nano-workbench · Tool Workbench';
-  }
-  var toastTimer;
-  function toast(msg){ $('toast').textContent=msg;$('toast').classList.add('show');
-    clearTimeout(toastTimer);toastTimer=setTimeout(function(){$('toast').classList.remove('show');},1700); }
-
-  function renderSide(){
-    var q=$('search').value;
-    var list=filterTools(TOOLS, q, '全部');
-    var grouped=groupByCat(list);
-    var side=$('side'); side.innerHTML='';
-    catsOf(list).forEach(function(cat){
-      var h=document.createElement('div');h.className='cat-h';h.textContent=cat;side.appendChild(h);
-      grouped[cat].forEach(function(tool){
-        var el=document.createElement('div');
-        el.className='tool'+(tool.id===activeId?' active':'');
-        el.innerHTML=iconSvg(tool.icon)+'<div class="col"><div class="nm">'+escapeHTML(tool.name)+
-          '</div><div class="ds">'+escapeHTML(tool.desc)+'</div></div>';
-        el.addEventListener('click',function(){openTool(tool.id);});
-        side.appendChild(el);
-      });
-    });
-  }
-
-  function frameFor(id){
-    var f=$('frame-'+id);
-    if(!f){
-      f=document.createElement('iframe');
-      f.id='frame-'+id; f.className='frame'; f.src=buildDemoUrl(id);
-      f.setAttribute('loading','lazy');
-      $('frameWrap').appendChild(f);
-    }
-    return f;
-  }
-
-  function renderTabs(){
-    var bar=$('tabs'); bar.innerHTML='';
-    tabs.forEach(function(tab){
-      var el=document.createElement('div');
-      el.className='tab'+(tab.id===activeId?' active':'');
-      el.innerHTML='<span>'+escapeHTML(tab.name)+'</span>'+
-        '<span class="ext" title="'+t('newtab')+'">⧉</span>'+
-        '<span class="x" title="close">×</span>';
-      el.addEventListener('click',function(e){
-        if(e.target.classList.contains('x')){ closeTab(tab.id); }
-        else if(e.target.classList.contains('ext')){ window.open(buildDemoUrl(tab.id),'_blank'); }
-        else { activate(tab.id); }
-      });
-      bar.appendChild(el);
-    });
-  }
-
-  function activate(id){
-    activeId=id;
-    // show only active frame
-    document.querySelectorAll('.frame').forEach(function(f){ f.classList.remove('show'); });
-    frameFor(id).classList.add('show');
-    $('empty').style.display='none';
-    renderTabs(); renderSide();
-  }
-
-  function openTool(id){
-    if(!tabs.some(function(x){return x.id===id;})){
-      var tool=TOOLS.find(function(x){return x.id===id;});
-      tabs.push({id:id, name:tool.name});
-      toast(t('toastOpen')+tool.name);
-    }
-    activate(id);
-  }
-
-  function closeTab(id){
-    tabs=tabs.filter(function(x){return x.id!==id;});
-    var f=$('frame-'+id); if(f) f.remove();
-    if(activeId===id){ activeId=tabs.length?tabs[tabs.length-1].id:null; }
-    if(activeId){ activate(activeId); }
-    else { document.querySelectorAll('.frame').forEach(function(f){f.classList.remove('show');}); $('empty').style.display='flex'; renderTabs(); renderSide(); }
-  }
-
-  $('search').addEventListener('input',renderSide);
-  $('langBtn').addEventListener('click',function(){lang=lang==='zh'?'en':'zh';localStorage.setItem('wb_lang',lang);applyLang();});
-
-  applyLang();
-  renderSide();
-  renderTabs();
-}
-</script>
-</body>
-</html>

@@ -15,7 +15,7 @@
   <g transform="translate(80,72)"><rect x="0" y="0" width="32" height="32" rx="8" fill="#5E6AD2"/><rect x="7" y="7" width="8" height="8" rx="2" fill="#0A0A0B"/><rect x="17" y="7" width="8" height="8" rx="2" fill="#FFFFFF"/><rect x="7" y="17" width="8" height="8" rx="2" fill="#10B981"/><rect x="17" y="17" width="8" height="8" rx="2" fill="#F5A623"/></g>
   <text x="124" y="96" fill="#FFFFFF" font-size="22" font-weight="700">nano-tools</text>
   <text x="78" y="252" fill="#FFFFFF" font-size="86" font-weight="800" letter-spacing="-1">nano-workbench</text>
-  <text x="82" y="308" fill="#A1A1AA" font-size="28">一个标签页，收纳全部 268 款工具</text>
+  <text x="82" y="308" fill="#A1A1AA" font-size="28">一个标签页，收纳全部 278 款工具</text>
   <g transform="translate(80,346)">
     <rect x="0" y="0" width="148" height="40" rx="10" fill="#141417" stroke="#5E6AD2" stroke-width="1.5"/>
     <circle cx="22" cy="20" r="6" fill="#5E6AD2"/>
