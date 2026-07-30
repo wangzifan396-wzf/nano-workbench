@@ -378,7 +378,17 @@ if(typeof window!=='undefined'){
     {id:"HabitForge", name:"HabitForge", icon:"habit", cat:"效率工具", badge:"旗舰", desc:"离线习惯追踪器：每日打卡、连击统计、半年热力图，数据只存本地。", tags:["habit","streak","heatmap"]},
     {id:"JsonPathForge", name:"JsonPathForge", icon:"jsonpath", cat:"数据工具", badge:"旗舰", desc:"JSONPath 查询器：自研解析器，过滤 / 切片 / 正则匹配，实时高亮命中。", tags:["jsonpath","json","query"]},
     {id:"NginxForge", name:"NginxForge", icon:"nginx", cat:"开发辅助", badge:"旗舰", desc:"Nginx 配置生成器：静态 / SPA / 代理 / 负载均衡，HTTPS / gzip / 限流。", tags:["nginx","config","proxy","lb"]},
-    {id:"ColorBlindForge", name:"ColorBlindForge", icon:"colorblind", cat:"设计工具", badge:"旗舰", desc:"色觉障碍模拟器：Machado 三型，WCAG 对比度与 ΔE 审计。", tags:["colorblind","wcag","contrast"]}
+    {id:"ColorBlindForge", name:"ColorBlindForge", icon:"colorblind", cat:"设计工具", badge:"旗舰", desc:"色觉障碍模拟器：Machado 三型，WCAG 对比度与 ΔE 审计。", tags:["colorblind","wcag","contrast"]},
+      {id:"StatForge", name:"StatForge", icon:"stat", cat:"数据工具", badge:"旗舰", desc:"统计与线性回归：均值/中位数/众数、方差/标准差、四分位与 IQR、线性拟合（斜率/截距/R²），一键出直方图，离线可用。", tags:["stat","mean","regression","histogram","summary"]},
+      {id:"LoanForge", name:"LoanForge", icon:"loan", cat:"实用计算", badge:"旗舰", desc:"贷款本息摊销：输入本金、年利率与期限，输出月供、总利息与逐期还款计划表，离线可用。", tags:["loan","amortization","apr","schedule","finance"]},
+      {id:"SplitForge", name:"SplitForge", icon:"split", cat:"实用计算", badge:"旗舰", desc:"聚餐 AA 分摊：逐条录入账单，自动加计小费/税费/折扣，按人数均摊出每人应付，离线可用。", tags:["split","bill","aa","tip","share"]},
+      {id:"BmiForge", name:"BmiForge", icon:"bmi", cat:"实用计算", badge:"旗舰", desc:"BMI 与健康区间：输入身高体重得 BMI 与中国成人标准分级，并给出健康体重范围与体脂率估算，离线可用。", tags:["bmi","health","weight","bodyfat","fitness"]},
+      {id:"StrengthForge", name:"StrengthForge", icon:"strength", cat:"安全工具", badge:"旗舰", desc:"密码强度估计：按字符集熵估算强度等级与暴力破解耗时，识别常见弱口令与模式，离线可用。", tags:["password","strength","entropy","crack","security"]},
+      {id:"HashIdForge", name:"HashIdForge", icon:"hashid", cat:"编码加密", badge:"旗舰", desc:"哈希类型识别：根据长度、字符集与特征前缀判断 md5/sha 系列/bcrypt/argon2/ntlm 等，离线可用。", tags:["hash","identify","md5","sha","bcrypt"]},
+      {id:"WorldClockForge", name:"WorldClockForge", icon:"world", cat:"实用计算", badge:"旗舰", desc:"世界时钟：并排显示多个时区当前时间，自动算时差，基于 Intl 离线可用。", tags:["world","clock","timezone","intl","time"]},
+      {id:"CountdownForge", name:"CountdownForge", icon:"countdown", cat:"实用计算", badge:"旗舰", desc:"多倒计时：添加多个目标时刻，实时显示剩余天/时/分/秒，本地保存，离线可用。", tags:["countdown","timer","target","local","event"]},
+      {id:"RecipeForge", name:"RecipeForge", icon:"recipe", cat:"效率工具", badge:"旗舰", desc:"食谱管理：录入配料一键按份量缩放，本地保存多个食谱，离线可用。", tags:["recipe","ingredients","scale","cook","local"]},
+      {id:"ExpenseForge", name:"ExpenseForge", icon:"expense", cat:"效率工具", badge:"旗舰", desc:"记账与预算：录入收支、按分类与月份汇总，本地保存，离线可用。", tags:["expense","budget","tracker","finance","local"]}
   ];
   var ICONS = {
     regex:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
@@ -636,7 +646,17 @@ if(typeof window!=='undefined'){
     habit:'<rect x="3" y="4" width="4" height="4" rx="1"/><rect x="10" y="4" width="4" height="4" rx="1"/><rect x="17" y="4" width="4" height="4" rx="1"/><rect x="3" y="11" width="4" height="4" rx="1"/><rect x="10" y="11" width="4" height="4" rx="1"/><path d="M17 13l1.5 1.5L21.5 11.5"/><path d="M3 20h18"/>',
     jsonpath:'<path d="M5 4v16M5 12h3M8 4v16M16 4v16M16 12h3M19 4v16"/>',
     nginx:'<path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="M12 8v8M9 13l3 3 3-3"/>',
-    colorblind:'<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/><path d="M4 4l16 16"/>'
+    colorblind:'<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/><path d="M4 4l16 16"/>',
+  stat:'<rect x="4" y="12" width="3" height="8" rx="1"/><rect x="10.5" y="7" width="3" height="13" rx="1"/><rect x="17" y="4" width="3" height="16" rx="1"/>',
+  loan:'<rect x="3" y="7" width="18" height="12" rx="2"/><path d="M7 7V5h10v2M12 11v3"/>',
+  split:'<path d="M4 6h7M11 6l-3-3M11 6l-3 3M4 18h7M11 18l-3-3M11 18l-3 3M14 12h6"/>',
+  bmi:'<circle cx="12" cy="6" r="2.5"/><path d="M12 9v7M8 13l4-2 4 2M9 21l3-5 3 5"/>',
+  strength:'<path d="M12 3l7 3v5c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/>',
+  hashid:'<path d="M9 4l-2 16M17 4l-2 16M5 9h14M4 15h14"/>',
+  world:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>',
+  countdown:'<circle cx="12" cy="13" r="7"/><path d="M12 13V9M9 3h6"/>',
+  recipe:'<path d="M5 4h11a2 2 0 0 1 2 2v14H7a2 2 0 0 1-2-2z"/><path d="M9 8h6M9 12h6"/>',
+  expense:'<rect x="3" y="6" width="18" height="13" rx="2"/><path d="M16 12h3a1 1 0 0 1 0 2h-3M3 9h12"/>'
   };
   function iconSvg(k){ return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+(ICONS[k]||"")+'</svg>'; }
 
