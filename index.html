@@ -418,7 +418,17 @@ if(typeof window!=='undefined'){
   {id:"JsonLdForge", name:"JsonLdForge", icon:"jsonld", cat:"开发辅助", badge:"旗舰", desc:"JSON-LD 结构化数据校验：schema.org 字段体检、日期校验、嵌入片段生成，离线可用。", tags:["jsonld","schema.org","seo","structured-data","validate","ld"]},
   {id:"DmarcForge", name:"DmarcForge", icon:"dmarc", cat:"安全工具", badge:"旗舰", desc:"DMARC 记录分析：标签解读、防护评分分级、语法体检与记录生成，离线可用。", tags:["dmarc","email","security","spf","dkim","dns","audit"]},
   {id:"GraphqlForge", name:"GraphqlForge", icon:"graphql", cat:"开发辅助", badge:"旗舰", desc:"GraphQL 查询分析：变量片段体检、变量模板生成、复杂度评分，离线可用。", tags:["graphql","query","lint","complexity","api","validate"]},
-  {id:"LlmCostForge", name:"LlmCostForge", icon:"llmcost", cat:"AI 工具", badge:"旗舰", desc:"大模型调用成本测算：token 估算、10 款模型比价、缓存节省与窗口预警，离线可用。", tags:["llm","cost","token","pricing","ai","budget"]}
+  {id:"LlmCostForge", name:"LlmCostForge", icon:"llmcost", cat:"AI 工具", badge:"旗舰", desc:"大模型调用成本测算：token 估算、10 款模型比价、缓存节省与窗口预警，离线可用。", tags:["llm","cost","token","pricing","ai","budget"]},
+  {id:"SeoForge", name:"SeoForge", icon:"seo", cat:"开发辅助", badge:"旗舰", desc:"SEO 与元数据分析：标题/描述/OG/Twitter/结构化数据体检、评分分级、关键词密度，离线可用。", tags:["seo","meta","opengraph","jsonld","audit","keyword"]},
+  {id:"JsonDiffForge", name:"JsonDiffForge", icon:"jsondiff", cat:"数据工具", badge:"旗舰", desc:"结构化 JSON 差异比对：递归扁平化、新增/删除/修改逐项列出、路径级定位，离线可用。", tags:["json","diff","compare","structural","path"]},
+  {id:"RegexExplainForge", name:"RegexExplainForge", icon:"regexexplain", cat:"开发辅助", badge:"旗舰", desc:"正则可视化解释器：逐片段中文化说明、分组/量词/转义解析、语法错误定位，离线可用。", tags:["regex","explain","parser","visualize","pattern"]},
+  {id:"TreemapForge", name:"TreemapForge", icon:"treemap", cat:"可视化", badge:"旗舰", desc:"方块树图生成器：squarified 布局、面积占比可视化、SVG 导出，离线可用。", tags:["treemap","chart","squarify","svg","hierarchy"]},
+  {id:"SvgOptForge", name:"SvgOptForge", icon:"svgopt", cat:"图像工具", badge:"旗舰", desc:"SVG 压缩优化器：去注释、数值取整、空白折叠、体积统计，离线可用。", tags:["svg","optimize","minify","compress","vector"]},
+  {id:"SpfForge", name:"SpfForge", icon:"spf", cat:"安全工具", badge:"旗舰", desc:"SPF 记录分析：机制解析、DNS 查询计数、防护评级 A-F、合规建议，离线可用。", tags:["spf","email","dns","security","audit"]},
+  {id:"DkimForge", name:"DkimForge", icon:"dkim", cat:"安全工具", badge:"旗舰", desc:"DKIM 记录分析：标签解读、密钥强度估算、防护评分分级、语法体检，离线可用。", tags:["dkim","email","dns","security","key"]},
+  {id:"CorsForge", name:"CorsForge", icon:"cors", cat:"开发辅助", badge:"旗舰", desc:"CORS 配置校验：通配符/多来源/凭证组合风险检测、合规评级，离线可用。", tags:["cors","security","origin","headers","validate"]},
+  {id:"HttpHeadersForge", name:"HttpHeadersForge", icon:"httpheaders", cat:"安全工具", badge:"旗舰", desc:"HTTP 安全响应头审计：HSTS/CSP/COOP 等 8 项体检、评分分级、修复建议，离线可用。", tags:["http","headers","security","hsts","csp","audit"]},
+  {id:"ColorContrastForge", name:"ColorContrastForge", icon:"contrast", cat:"设计工具", badge:"旗舰", desc:"WCAG 颜色对比度计算器：相对亮度、对比比率、AA/AAA 通过判定与实时预览，离线可用。", tags:["color","contrast","wcag","accessibility","a11y"]}
   ];
   var ICONS = {
     regex:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
@@ -716,5 +726,15 @@ if(typeof window!=='undefined'){
   jsonld:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/>',
   dmarc:'<path d="M12 3l8 3v6c0 4.5-3.2 7.9-8 9-4.8-1.1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/>',
   graphql:'<circle cx="12" cy="4" r="1.8"/><circle cx="4" cy="9" r="1.8"/><circle cx="20" cy="9" r="1.8"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/><path d="M12 4L4 9l3 9h10l3-9z"/>',
-  llmcost:'<circle cx="12" cy="12" r="9"/><path d="M14.5 9a3 3 0 0 0-5 2c0 2.5 5 1.5 5 4a3 3 0 0 1-5 2M12 6v2M12 16v2"/>'
+  llmcost:'<circle cx="12" cy="12" r="9"/><path d="M14.5 9a3 3 0 0 0-5 2c0 2.5 5 1.5 5 4a3 3 0 0 1-5 2M12 6v2M12 16v2"/>',
+  seo:'<circle cx="10.5" cy="10.5" r="6"/><path d="M20 20l-4.5-4.5M7.5 10.5h6M10.5 7.5v6"/>',
+  jsondiff:'<rect x="3" y="4" width="8" height="16" rx="1.5"/><rect x="13" y="4" width="8" height="16" rx="1.5"/><path d="M12 2v20"/>',
+  regexexplain:'<path d="M9 8l-4 4 4 4M15 8l4 4-4 4M13 6l-2 12"/>',
+  treemap:'<rect x="3" y="3" width="11" height="11" rx="1"/><rect x="16" y="3" width="5" height="7" rx="1"/><rect x="16" y="12" width="5" height="9" rx="1"/><rect x="3" y="16" width="11" height="5" rx="1"/>',
+  svgopt:'<path d="M4 9V5a1 1 0 0 1 1-1h4M20 9V5a1 1 0 0 0-1-1h-4M4 15v4a1 1 0 0 0 1 1h4M20 15v4a1 1 0 0 1-1 1h-4M9 12h6"/>',
+  spf:'<path d="M12 3l8 3v6c0 4.5-3.2 7.9-8 9-4.8-1.1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/>',
+  dkim:'<circle cx="8" cy="12" r="4"/><path d="M12 12h9M17 12v3M14 12v2"/>',
+  cors:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18M7 8c2 2 8 2 10 0M7 16c2-2 8-2 10 0"/>',
+  httpheaders:'<path d="M4 5h16M4 9h12M4 13h16M4 17h9"/><circle cx="18" cy="17" r="1.5"/>',
+  contrast:'<circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/>'
   };
