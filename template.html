@@ -408,7 +408,17 @@ if(typeof window!=='undefined'){
   {id:"IbanForge", name:"IbanForge", icon:"iban", cat:"安全工具", badge:"旗舰", desc:"IBAN 与银行卡校验：mod-97 校验位推算、41 国长度表、四位分组格式化、Luhn 校验，离线可用。", tags:["iban","bank","mod97","luhn","validate"]},
   {id:"PaceForge", name:"PaceForge", icon:"pace", cat:"实用计算", badge:"旗舰", desc:"跑步配速计算：配速 / 用时 / 速度三向互算、公里分段表、Riegel 公式预测 5K 到全马，离线可用。", tags:["pace","running","split","riegel","marathon"]},
   {id:"KeycodeForge", name:"KeycodeForge", icon:"keyc", cat:"开发辅助", badge:"旗舰", desc:"键盘事件查看器：实时捕获 key / code / keyCode、组合键与 macOS 记法、按码反查，离线可用。", tags:["keycode","keyboard","event","shortcut","dev"]},
-  {id:"RobotsForge", name:"RobotsForge", icon:"robots", cat:"网络", badge:"旗舰", desc:"robots.txt 生成与抓取测试：按 UA 选组、最长匹配判定、通配符与 $ 锚点、语法体检，离线可用。", tags:["robots","seo","crawler","useragent","allow"]}
+  {id:"RobotsForge", name:"RobotsForge", icon:"robots", cat:"网络", badge:"旗舰", desc:"robots.txt 生成与抓取测试：按 UA 选组、最长匹配判定、通配符与 $ 锚点、语法体检，离线可用。", tags:["robots","seo","crawler","useragent","allow"]},
+  {id:"ChefForge", name:"ChefForge", icon:"chef", cat:"编码加密", badge:"旗舰", desc:"链式编解码流水线：Base64/Hex/URL/ROT13/XOR 组合配方、逐步中间结果，离线可用。", tags:["codec","base64","hex","url","rot13","xor","entropy","pipeline"]},
+  {id:"AttentionForge", name:"AttentionForge", icon:"attn", cat:"AI 工具", badge:"旗舰", desc:"Transformer 注意力可视化：QK 缩放点积、softmax 权重热力矩阵、因果掩码，离线可用。", tags:["attention","transformer","softmax","embedding","heatmap","ml"]},
+  {id:"DbmlForge", name:"DbmlForge", icon:"dbml", cat:"开发辅助", badge:"旗舰", desc:"DBML 转 SQL DDL：双方言生成、外键推导、Mermaid ER 导出与 schema 体检，离线可用。", tags:["dbml","sql","ddl","schema","er","postgres","mysql"]},
+  {id:"FlamegraphForge", name:"FlamegraphForge", icon:"flame", cat:"可视化", badge:"旗舰", desc:"火焰图渲染器：折叠栈转 SVG、self 时间排行、最热调用路径，离线可用。", tags:["flamegraph","profiling","svg","performance","stack"]},
+  {id:"HeatmapForge", name:"HeatmapForge", icon:"heatmap", cat:"可视化", badge:"旗舰", desc:"日历活动热力图：GitHub 风格贡献格、分位配色、连续打卡统计，离线可用。", tags:["heatmap","calendar","streak","contribution","svg","github"]},
+  {id:"TreeForge", name:"TreeForge", icon:"tree", cat:"文本处理", badge:"旗舰", desc:"目录树生成器：缩进与路径列表转 tree 连线图，JSON/ASCII 互转，离线可用。", tags:["tree","directory","filesystem","ascii","json","path"]},
+  {id:"JsonLdForge", name:"JsonLdForge", icon:"jsonld", cat:"开发辅助", badge:"旗舰", desc:"JSON-LD 结构化数据校验：schema.org 字段体检、日期校验、嵌入片段生成，离线可用。", tags:["jsonld","schema.org","seo","structured-data","validate","ld"]},
+  {id:"DmarcForge", name:"DmarcForge", icon:"dmarc", cat:"安全工具", badge:"旗舰", desc:"DMARC 记录分析：标签解读、防护评分分级、语法体检与记录生成，离线可用。", tags:["dmarc","email","security","spf","dkim","dns","audit"]},
+  {id:"GraphqlForge", name:"GraphqlForge", icon:"graphql", cat:"开发辅助", badge:"旗舰", desc:"GraphQL 查询分析：变量片段体检、变量模板生成、复杂度评分，离线可用。", tags:["graphql","query","lint","complexity","api","validate"]},
+  {id:"LlmCostForge", name:"LlmCostForge", icon:"llmcost", cat:"AI 工具", badge:"旗舰", desc:"大模型调用成本测算：token 估算、10 款模型比价、缓存节省与窗口预警，离线可用。", tags:["llm","cost","token","pricing","ai","budget"]}
   ];
   var ICONS = {
     regex:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
@@ -696,5 +706,15 @@ if(typeof window!=='undefined'){
   iban:'<rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18M6 14h4"/>',
   pace:'<circle cx="12" cy="13" r="7"/><path d="M12 13l3-3M9 3h6"/>',
   keyc:'<rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M8 14h8"/>',
-  robots:'<rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01M9 16h6"/>'
+  robots:'<rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01M9 16h6"/>',
+  chef:'<path d="M6 20h12M7 16h10a4 4 0 0 0 .6-7.9A4.5 4.5 0 0 0 9 6.5 3.5 3.5 0 0 0 6.6 12 4 4 0 0 0 7 16z"/>',
+  attn:'<circle cx="6" cy="7" r="2"/><circle cx="6" cy="17" r="2"/><circle cx="18" cy="12" r="2"/><path d="M8 7l8 4M8 17l8-4"/>',
+  dbml:'<ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/>',
+  flame:'<path d="M12 3c1 3-2 4-2 7a4 4 0 0 0 8 0c0-1-.4-2-1-3 3 2 4 5 4 7a9 9 0 1 1-18 0c0-5 5-7 9-11z"/>',
+  heatmap:'<rect x="3" y="4" width="5" height="5" rx="1"/><rect x="10" y="4" width="5" height="5" rx="1"/><rect x="17" y="4" width="4" height="5" rx="1"/><rect x="3" y="11" width="5" height="5" rx="1"/><rect x="10" y="11" width="5" height="5" rx="1"/>',
+  tree:'<path d="M5 4v14a2 2 0 0 0 2 2h3M5 11h5"/><rect x="12" y="3" width="8" height="4" rx="1"/><rect x="12" y="9" width="8" height="4" rx="1"/><rect x="12" y="16" width="8" height="4" rx="1"/>',
+  jsonld:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/>',
+  dmarc:'<path d="M12 3l8 3v6c0 4.5-3.2 7.9-8 9-4.8-1.1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/>',
+  graphql:'<circle cx="12" cy="4" r="1.8"/><circle cx="4" cy="9" r="1.8"/><circle cx="20" cy="9" r="1.8"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/><path d="M12 4L4 9l3 9h10l3-9z"/>',
+  llmcost:'<circle cx="12" cy="12" r="9"/><path d="M14.5 9a3 3 0 0 0-5 2c0 2.5 5 1.5 5 4a3 3 0 0 1-5 2M12 6v2M12 16v2"/>'
   };
