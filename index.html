@@ -428,7 +428,17 @@ if(typeof window!=='undefined'){
   {id:"DkimForge", name:"DkimForge", icon:"dkim", cat:"安全工具", badge:"旗舰", desc:"DKIM 记录分析：标签解读、密钥强度估算、防护评分分级、语法体检，离线可用。", tags:["dkim","email","dns","security","key"]},
   {id:"CorsForge", name:"CorsForge", icon:"cors", cat:"开发辅助", badge:"旗舰", desc:"CORS 配置校验：通配符/多来源/凭证组合风险检测、合规评级，离线可用。", tags:["cors","security","origin","headers","validate"]},
   {id:"HttpHeadersForge", name:"HttpHeadersForge", icon:"httpheaders", cat:"安全工具", badge:"旗舰", desc:"HTTP 安全响应头审计：HSTS/CSP/COOP 等 8 项体检、评分分级、修复建议，离线可用。", tags:["http","headers","security","hsts","csp","audit"]},
-  {id:"ColorContrastForge", name:"ColorContrastForge", icon:"contrast", cat:"设计工具", badge:"旗舰", desc:"WCAG 颜色对比度计算器：相对亮度、对比比率、AA/AAA 通过判定与实时预览，离线可用。", tags:["color","contrast","wcag","accessibility","a11y"]}
+  {id:"ColorContrastForge", name:"ColorContrastForge", icon:"contrast", cat:"设计工具", badge:"旗舰", desc:"WCAG 颜色对比度计算器：相对亮度、对比比率、AA/AAA 通过判定与实时预览，离线可用。", tags:["color","contrast","wcag","accessibility","a11y"]},
+  {id:"PngForge", name:"PngForge", icon:"png", cat:"图像工具", badge:"旗舰", desc:"PNG 元数据解析：读取 IHDR 尺寸/色彩类型/位深/交错、调色板与 ICC 标记、tEXt 文本块，离线可用。", tags:["png","image","metadata","ihdr","chunk","parser"]},
+  {id:"EasingForge", name:"EasingForge", icon:"easing", cat:"设计工具", badge:"旗舰", desc:"缓动函数库：10 种经典曲线 + cubic-bezier 牛顿迭代求值，SVG 曲线可视化预览，离线可用。", tags:["easing","animation","cubic-bezier","curve","css"]},
+  {id:"GridForge", name:"GridForge", icon:"grid", cat:"设计工具", badge:"旗舰", desc:"CSS Grid 模板生成器：列/行/单位/间距实时生成 grid-template 与模板区域，带可视预览，离线可用。", tags:["css","grid","layout","template-areas","generator"]},
+  {id:"RateLimitForge", name:"RateLimitForge", icon:"ratelimit", cat:"开发辅助", badge:"旗舰", desc:"限流算法可视化：令牌桶/漏桶/滑动窗口的可用量、剩余量与容量估算，附算法对比说明，离线可用。", tags:["ratelimit","token-bucket","leaky-bucket","sliding-window","throttle"]},
+  {id:"SqlExplainForge", name:"SqlExplainForge", icon:"sqlexplain", cat:"开发辅助", badge:"旗舰", desc:"SQL 执行顺序解析：拆解 SELECT/FROM/JOIN/WHERE/GROUP/ORDER/LIMIT，按真实执行步骤还原，离线可用。", tags:["sql","explain","query","execution-order","parser"]},
+  {id:"LzStringForge", name:"LzStringForge", icon:"lz", cat:"编码加密", badge:"旗舰", desc:"LZW 字符串压缩：纯 JS 文本压缩为 Base64、UTF-8 安全、压缩率统计与无损还原，离线可用。", tags:["lzw","compress","base64","string","lossless"]},
+  {id:"IcoForge", name:"IcoForge", icon:"ico", cat:"图像工具", badge:"旗舰", desc:"PNG 转 ICO：校验 PNG 签名、读取尺寸并打包为 Windows .ico 容器供下载，纯前端离线生成。", tags:["ico","png","icon","favicon","convert"]},
+  {id:"SvgPathForge", name:"SvgPathForge", icon:"svgpath", cat:"设计工具", badge:"旗舰", desc:"SVG path 工具箱：命令解析、相对↔绝对互转、包围盒计算与坐标数值简化取整，离线可用。", tags:["svg","path","bbox","absolute","simplify"]},
+  {id:"JsonPointerForge", name:"JsonPointerForge", icon:"pointer", cat:"数据工具", badge:"旗舰", desc:"RFC 6901 JSON Pointer：按 /a/b/1 取值与赋值、~0/~1 转义处理，便于 JSON 补丁与定位，离线可用。", tags:["json","pointer","rfc6901","patch","path"]},
+  {id:"AsciiTableForge", name:"AsciiTableForge", icon:"asciitbl", cat:"文本处理", badge:"旗舰", desc:"ASCII 表格生成器：Tab/逗号分隔行列数据渲染为带边框、列宽对齐的纯文本表格，离线可用。", tags:["ascii","table","text","align","markdown"]}
   ];
   var ICONS = {
     regex:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
@@ -736,5 +746,15 @@ if(typeof window!=='undefined'){
   dkim:'<circle cx="8" cy="12" r="4"/><path d="M12 12h9M17 12v3M14 12v2"/>',
   cors:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18M7 8c2 2 8 2 10 0M7 16c2-2 8-2 10 0"/>',
   httpheaders:'<path d="M4 5h16M4 9h12M4 13h16M4 17h9"/><circle cx="18" cy="17" r="1.5"/>',
-  contrast:'<circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/>'
+  contrast:'<circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/>',
+  png:'<rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5-5 5"/>',
+  easing:'<path d="M3 18Q12 3 21 18"/><circle cx="12" cy="10.5" r="2"/>',
+  grid:'<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>',
+  ratelimit:'<path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="6"/>',
+  sqlexplain:'<ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5"/><path d="M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/>',
+  lz:'<path d="M4 7h16M4 12h10M4 17h7"/><path d="M15 14l5 5M20 14l-5 5"/>',
+  ico:'<path d="M12 2l9 4v6c0 5-3.8 8.4-9 10-5.2-1.6-9-5-9-10V6z"/><path d="M9 12l2 2 4-4"/>',
+  svgpath:'<path d="M4 18C4 10 10 4 20 4"/><circle cx="4" cy="18" r="2"/><circle cx="20" cy="4" r="2"/>',
+  pointer:'<path d="M9 11l3 3 3-3"/><path d="M12 4v10"/><path d="M4 18h16"/>',
+  asciitbl:'<rect x="3" y="4" width="18" height="4" rx="1"/><rect x="3" y="10" width="18" height="4" rx="1"/><rect x="3" y="16" width="18" height="4" rx="1"/>'
   };
