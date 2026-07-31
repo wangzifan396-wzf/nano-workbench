@@ -448,7 +448,17 @@ if(typeof window!=='undefined'){
   {id:"CspForge", name:"CspForge", icon:"csp", cat:"安全工具", badge:"旗舰", desc:"内容安全策略生成与评分：strict/basic/lockdown 三档模板、nonce 生成、unsafe-inline 与通配符风险检测，离线可用。", tags:["csp","security","xss","nonce","strict-dynamic","header"]},
   {id:"SriForge", name:"SriForge", icon:"sri", cat:"安全工具", badge:"旗舰", desc:"子资源完整性 SRI：纯前端 SHA-256 摘要（base64/hex）、integrity 解析校验、script/link 标签生成与跨域体检，离线可用。", tags:["sri","integrity","sha256","cdn","security","subresource"]},
   {id:"BlurhashForge", name:"BlurhashForge", icon:"blurhash", cat:"图像工具", badge:"旗舰", desc:"BlurHash 编解码：base83 与 DCT 分量还原、Canvas 实时预览、渐变编码生成与 CSS 占位图导出，离线可用。", tags:["blurhash","placeholder","image","base83","dct","preview"]},
-  {id:"NdjsonForge", name:"NdjsonForge", icon:"ndjson", cat:"数据工具", badge:"旗舰", desc:"NDJSON/JSON Lines 处理：逐行校验与错误定位、嵌套字段画像、类型一致性体检、JSON 数组与 CSV 互转，离线可用。", tags:["ndjson","jsonl","csv","schema","data","validate"]}
+  {id:"NdjsonForge", name:"NdjsonForge", icon:"ndjson", cat:"数据工具", badge:"旗舰", desc:"NDJSON/JSON Lines 处理：逐行校验与错误定位、嵌套字段画像、类型一致性体检、JSON 数组与 CSV 互转，离线可用。", tags:["ndjson","jsonl","csv","schema","data","validate"]},
+  {id:"EvalForge", name:"EvalForge", icon:"evalm", cat:"AI 工具", badge:"旗舰", desc:"LLM 输出评测：BLEU-4 / ROUGE-L / token F1 / 编辑相似度逐项打分，支持批量成对评测与 pass@k 估算，离线可用。", tags:["eval","llm","bleu","rouge","f1","pass@k"]},
+  {id:"PromptDiffForge", name:"PromptDiffForge", icon:"promptdiff", cat:"AI 工具", badge:"旗舰", desc:"提示词版本对比：LCS 行级差异与词级高亮、token 增减率、六款模型调用成本影响与 prompt lint，离线可用。", tags:["prompt","diff","llm","token","cost","lint"]},
+  {id:"WebhookForge", name:"WebhookForge", icon:"webhook", cat:"安全工具", badge:"旗舰", desc:"Webhook 签名校验：Stripe/GitHub/Shopify/Slack 五种方案本地 HMAC-SHA256 验签、重放窗口检查与退避重试推演，离线可用。", tags:["webhook","hmac","signature","stripe","github","retry"]},
+  {id:"OpenapiForge", name:"OpenapiForge", icon:"openapi", cat:"开发辅助", badge:"旗舰", desc:"OpenAPI 规范体检：内置 YAML/JSON 解析、operationId 重复与路径参数未声明检测、响应覆盖率 A–F 评分与 curl 生成，离线可用。", tags:["openapi","swagger","yaml","lint","api","curl"]},
+  {id:"ProtoForge", name:"ProtoForge", icon:"protobuf", cat:"开发辅助", badge:"旗舰", desc:"Protobuf 结构解析：message/enum/service/oneof/map 语法解析、wire type 与 tag 字节开销测算、字段号体检与 TypeScript 导出，离线可用。", tags:["protobuf","proto3","grpc","schema","typescript","lint"]},
+  {id:"DepGraphForge", name:"DepGraphForge", icon:"depgraph", cat:"开发辅助", badge:"旗舰", desc:"依赖体检与循环检测：package.json 版本范围风险打分、模块依赖图循环查找、拓扑排序与扇入扇出指标、DOT 导出，离线可用。", tags:["dependency","package.json","cycle","topology","graph","dot"]},
+  {id:"SankeyForge", name:"SankeyForge", icon:"sankey", cat:"可视化", badge:"旗舰", desc:"桑基流量图：一行一条流向文本直出 SVG，最长路径自动分层、贝塞尔缎带渲染与节点流量守恒体检，离线可用。", tags:["sankey","flow","svg","diagram","chart","layer"]},
+  {id:"WaterfallForge", name:"WaterfallForge", icon:"waterfall", cat:"可视化", badge:"旗舰", desc:"瀑布图：期初到期末的增减归因，红涨绿跌符合 A 股习惯，自动累计与连接线、贡献度排序与 SVG 导出，离线可用。", tags:["waterfall","chart","finance","bridge","svg","attribution"]},
+  {id:"RadarForge", name:"RadarForge", icon:"radarchart", cat:"可视化", badge:"旗舰", desc:"雷达图：多维能力对比直出 SVG，覆盖面积占比、均衡度与变异系数、逐轴最优最差与极差分析，离线可用。", tags:["radar","chart","svg","compare","multivariate","balance"]},
+  {id:"CalendarHeatForge", name:"CalendarHeatForge", icon:"calheat", cat:"可视化", badge:"旗舰", desc:"日历热力图：GitHub 风格贡献格，同日累加、五档配色、当前与最长连续天数、活跃覆盖率与星期分布，离线可用。", tags:["calendar","heatmap","streak","github","svg","contribution"]}
   ];
   var ICONS = {
     regex:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
@@ -776,5 +786,15 @@ if(typeof window!=='undefined'){
   csp:'<path d="M12 2l8 3.5v6c0 4.8-3.4 8.6-8 10.5-4.6-1.9-8-5.7-8-10.5v-6z"/><path d="M9.5 12.5l1.8 1.8 3.7-3.9"/>',
   sri:'<path d="M12 3l8 3v6.5c0 4.5-3.2 8-8 9.5-4.8-1.5-8-5-8-9.5V6z"/><path d="M8.5 12h7M12 8.5v7"/>',
   blurhash:'<rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="9" cy="10" r="2"/><path d="M3 17l5-4 4 3 3-2 6 5"/>',
-  ndjson:'<path d="M4 5h4M4 12h4M4 19h4"/><rect x="11" y="3" width="10" height="4" rx="1"/><rect x="11" y="10" width="10" height="4" rx="1"/><rect x="11" y="17" width="10" height="4" rx="1"/>'
+  ndjson:'<path d="M4 5h4M4 12h4M4 19h4"/><rect x="11" y="3" width="10" height="4" rx="1"/><rect x="11" y="10" width="10" height="4" rx="1"/><rect x="11" y="17" width="10" height="4" rx="1"/>',
+  evalm:'<path d="M3 5h10M3 10h7M3 15h10"/><path d="M14.5 8.5l3 3 5-5.5"/><path d="M3 20h9"/>',
+  promptdiff:'<rect x="3" y="4" width="7" height="16" rx="1.5"/><rect x="14" y="4" width="7" height="16" rx="1.5"/><path d="M12 7v10"/>',
+  webhook:'<circle cx="12" cy="6" r="3"/><path d="M12 9v4a3 3 0 003 3h1.5"/><circle cx="19" cy="16" r="2.5"/><circle cx="5" cy="16" r="2.5"/><path d="M9.6 8.3L6.4 13.6"/>',
+  openapi:'<path d="M8.5 4H6a2 2 0 00-2 2v12a2 2 0 002 2h2.5"/><path d="M15.5 4H18a2 2 0 012 2v12a2 2 0 01-2 2h-2.5"/><path d="M10 14l4-6"/>',
+  protobuf:'<rect x="3" y="7" width="4" height="10" rx="1"/><rect x="10" y="4" width="4" height="16" rx="1"/><rect x="17" y="9" width="4" height="6" rx="1"/>',
+  depgraph:'<circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M10.6 6.9L6.4 15.7M13.4 6.9l4.2 8.8M7.5 18h9"/>',
+  sankey:'<path d="M3 6h3c6 0 3 12 9 12h6"/><path d="M3 15h3c4 0 3-7 8-7h7"/><path d="M3 5v4M3 14v4"/>',
+  waterfall:'<rect x="3" y="13" width="3.5" height="7" rx="1"/><rect x="8.2" y="9" width="3.5" height="5" rx="1"/><rect x="13.4" y="6" width="3.5" height="4" rx="1"/><rect x="18.6" y="4" width="2.4" height="16" rx="1"/>',
+  radarchart:'<path d="M12 3l8.5 6.2-3.3 10H6.8l-3.3-10z"/><path d="M12 8.2l4.1 3-1.6 4.8H9.5L7.9 11.2z"/><path d="M12 3v5.2M20.5 9.2l-4.4 2M17.2 19.2L14.5 16M6.8 19.2L9.5 16M3.5 9.2l4.4 2"/>',
+  calheat:'<rect x="3" y="5" width="4" height="4" rx="1"/><rect x="10" y="5" width="4" height="4" rx="1"/><rect x="17" y="5" width="4" height="4" rx="1"/><rect x="3" y="12" width="4" height="4" rx="1"/><rect x="10" y="12" width="4" height="4" rx="1"/><rect x="17" y="12" width="4" height="4" rx="1"/>'
   };
