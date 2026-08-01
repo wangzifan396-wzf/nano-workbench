@@ -461,7 +461,11 @@ if(typeof window!=='undefined'){
   {id:"CalendarHeatForge", name:"CalendarHeatForge", icon:"calheat", cat:"可视化", badge:"旗舰", desc:"日历热力图：GitHub 风格贡献格，同日累加、五档配色、当前与最长连续天数、活跃覆盖率与星期分布，离线可用。", tags:["calendar","heatmap","streak","github","svg","contribution"]},
   {id:"PkceForge", name:"PkceForge", icon:"pkce", cat:"安全工具", badge:"旗舰", desc:"OAuth 2.0 PKCE 全流程本地推演：verifier 与 S256 challenge 浏览器内生成、授权 URL 拼装、回调 state 校验与流程安全体检，离线可用。", tags:["oauth","pkce","s256","verifier","auth","security"]},
   {id:"RssForge", name:"RssForge", icon:"rss", cat:"数据工具", badge:"旗舰", desc:"订阅源生成：一份条目同时导出 RSS 2.0 / Atom 1.0 / JSON Feed，XML 转义、RFC822/RFC3339 时间格式化与订阅源体检，离线可用。", tags:["rss","atom","jsonfeed","feed","xml","subscribe"]},
-  {id:"IcsForge", name:"IcsForge", icon:"ics", cat:"效率工具", badge:"旗舰", desc:"iCalendar 生成：一行一个事件自动折叠 75 字节、生成 UID 与 RRULE，UTC/浮动/全天三种时间模式，导出前检测时间冲突与结构性错误，离线可用。", tags:["ics","icalendar","calendar","vevent","rrule","schedule"]}
+  {id:"IcsForge", name:"IcsForge", icon:"ics", cat:"效率工具", badge:"旗舰", desc:"iCalendar 生成：一行一个事件自动折叠 75 字节、生成 UID 与 RRULE，UTC/浮动/全天三种时间模式，导出前检测时间冲突与结构性错误，离线可用。", tags:["ics","icalendar","calendar","vevent","rrule","schedule"]},
+  {id:"K8sForge", name:"K8sForge", icon:"k8s", cat:"开发辅助", badge:"旗舰", desc:"Kubernetes 清单生成：Deployment / Service / Ingress / ConfigMap / Secret / HPA / PVC 一键产出合规 YAML，Secret 值自动 base64，命名规范化与镜像 tag、副本数体检，离线可用。", tags:["kubernetes","k8s","yaml","manifest","deployment","devops"]},
+  {id:"PromQLForge", name:"PromQLForge", icon:"prom", cat:"数据工具", badge:"旗舰", desc:"PromQL 查询生成：指标名 + 标签匹配 + rate/increase 区间函数 + sum/avg by 聚合 + offset 偏移，内置 CPU/内存/QPS/P99 模板与括号、时长、函数名体检，离线可用。", tags:["promql","prometheus","grafana","observability","metrics","query"]},
+  {id:"WAFForge", name:"WAFForge", icon:"waf", cat:"安全工具", badge:"旗舰", desc:"WAF 规则生成：ModSecurity / OWASP-CRS 风格 SecRule 与等价 JSON 策略同时产出，内置 SQLi、XSS、路径遍历、IP 封禁、限流模板与 rule id、phase、动作体检，离线可用。", tags:["waf","modsecurity","owasp","secrule","firewall","security"]},
+  {id:"JqForge", name:"JqForge", icon:"jq", cat:"数据工具", badge:"旗舰", desc:"jq 风格 JSON 变换：浏览器内实现字段访问、数组索引、管道与 map/select/keys/sort_by/group_by/unique/add 等子集解释器，支持比较与 and/or 过滤，数据不出本机。", tags:["jq","json","transform","query","pipeline","data"]}
   ];
   var ICONS = {
     regex:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
@@ -802,5 +806,116 @@ if(typeof window!=='undefined'){
   calheat:'<rect x="3" y="5" width="4" height="4" rx="1"/><rect x="10" y="5" width="4" height="4" rx="1"/><rect x="17" y="5" width="4" height="4" rx="1"/><rect x="3" y="12" width="4" height="4" rx="1"/><rect x="10" y="12" width="4" height="4" rx="1"/><rect x="17" y="12" width="4" height="4" rx="1"/>',
   pkce:'<circle cx="9" cy="9" r="4.5"/><path d="M12.2 12.2L20 20M17 17l2-2M19 19l2-2"/>',
   rss:'<path d="M5 18a1 1 0 102 0 1 1 0 00-2 0"/><path d="M4 11a9 9 0 019 9M4 5a15 15 0 0115 15"/>',
-  ics:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/>'
+  ics:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/>',
+  k8s:'<path d="M12 3l7 4v8l-7 4-7-4V7z"/><path d="M12 3v18M5 7l14 10M19 7L5 17"/>',
+  prom:'<path d="M3 17l5-5 4 3 8-8"/><path d="M3 21h18"/>',
+  waf:'<path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z"/><path d="M9 12l2 2 4-4"/>',
+  jq:'<path d="M8 4H6a2 2 0 00-2 2v12a2 2 0 002 2h2"/><path d="M16 4h2a2 2 0 012 2v12a2 2 0 01-2 2h-2"/>'
   };
+  function iconSvg(k){ return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+(ICONS[k]||"")+'</svg>'; }
+
+  var I18N={
+    zh:{pick:'从左侧选择一个工具开始',hint:'所有工具都在一个标签页里即时切换，无需反复打开新页面。',
+        search:'搜索工具…',ext:'新标签',toastOpen:'已打开：',newtab:'在新标签打开'},
+    en:{pick:'Pick a tool from the left to start',hint:'All tools switch instantly in one tab — no more reopening pages.',
+        search:'Search tools…',ext:'new tab',toastOpen:'Opened: ',newtab:'Open in new tab'}
+  };
+  var lang=localStorage.getItem('wb_lang')||'zh';
+  var $=function(id){return document.getElementById(id);};
+  var t=function(k){return (I18N[lang]&&I18N[lang][k])||k;};
+  var tabs=[]; // [{id,name}]
+  var activeId=null;
+
+  function applyLang(){
+    document.documentElement.lang=lang==='zh'?'zh-CN':'en';
+    document.querySelectorAll('[data-i18n]').forEach(function(el){el.textContent=t(el.dataset.i18n);});
+    $('search').placeholder=t('search');
+    $('langBtn').textContent=lang==='zh'?'EN':'中';
+    document.title=lang==='zh'?'nano-workbench · 工具工作台':'nano-workbench · Tool Workbench';
+  }
+  var toastTimer;
+  function toast(msg){ $('toast').textContent=msg;$('toast').classList.add('show');
+    clearTimeout(toastTimer);toastTimer=setTimeout(function(){$('toast').classList.remove('show');},1700); }
+
+  function renderSide(){
+    var q=$('search').value;
+    var list=filterTools(TOOLS, q, '全部');
+    var grouped=groupByCat(list);
+    var side=$('side'); side.innerHTML='';
+    catsOf(list).forEach(function(cat){
+      var h=document.createElement('div');h.className='cat-h';h.textContent=cat;side.appendChild(h);
+      grouped[cat].forEach(function(tool){
+        var el=document.createElement('div');
+        el.className='tool'+(tool.id===activeId?' active':'');
+        el.innerHTML=iconSvg(tool.icon)+'<div class="col"><div class="nm">'+escapeHTML(tool.name)+
+          '</div><div class="ds">'+escapeHTML(tool.desc)+'</div></div>';
+        el.addEventListener('click',function(){openTool(tool.id);});
+        side.appendChild(el);
+      });
+    });
+  }
+
+  function frameFor(id){
+    var f=$('frame-'+id);
+    if(!f){
+      f=document.createElement('iframe');
+      f.id='frame-'+id; f.className='frame'; f.src=buildDemoUrl(id);
+      f.setAttribute('loading','lazy');
+      $('frameWrap').appendChild(f);
+    }
+    return f;
+  }
+
+  function renderTabs(){
+    var bar=$('tabs'); bar.innerHTML='';
+    tabs.forEach(function(tab){
+      var el=document.createElement('div');
+      el.className='tab'+(tab.id===activeId?' active':'');
+      el.innerHTML='<span>'+escapeHTML(tab.name)+'</span>'+
+        '<span class="ext" title="'+t('newtab')+'">⧉</span>'+
+        '<span class="x" title="close">×</span>';
+      el.addEventListener('click',function(e){
+        if(e.target.classList.contains('x')){ closeTab(tab.id); }
+        else if(e.target.classList.contains('ext')){ window.open(buildDemoUrl(tab.id),'_blank'); }
+        else { activate(tab.id); }
+      });
+      bar.appendChild(el);
+    });
+  }
+
+  function activate(id){
+    activeId=id;
+    // show only active frame
+    document.querySelectorAll('.frame').forEach(function(f){ f.classList.remove('show'); });
+    frameFor(id).classList.add('show');
+    $('empty').style.display='none';
+    renderTabs(); renderSide();
+  }
+
+  function openTool(id){
+    if(!tabs.some(function(x){return x.id===id;})){
+      var tool=TOOLS.find(function(x){return x.id===id;});
+      tabs.push({id:id, name:tool.name});
+      toast(t('toastOpen')+tool.name);
+    }
+    activate(id);
+  }
+
+  function closeTab(id){
+    tabs=tabs.filter(function(x){return x.id!==id;});
+    var f=$('frame-'+id); if(f) f.remove();
+    if(activeId===id){ activeId=tabs.length?tabs[tabs.length-1].id:null; }
+    if(activeId){ activate(activeId); }
+    else { document.querySelectorAll('.frame').forEach(function(f){f.classList.remove('show');}); $('empty').style.display='flex'; renderTabs(); renderSide(); }
+  }
+
+  $('search').addEventListener('input',renderSide);
+  $('langBtn').addEventListener('click',function(){lang=lang==='zh'?'en':'zh';localStorage.setItem('wb_lang',lang);applyLang();});
+
+  applyLang();
+  renderSide();
+  renderTabs();
+}
+</script>
+</body>
+</html>
