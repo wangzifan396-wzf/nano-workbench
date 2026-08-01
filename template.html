@@ -469,7 +469,11 @@ if(typeof window!=='undefined'){
   {id:"FlexboxForge", name:"FlexboxForge", icon:"flexbox", cat:"设计工具", badge:"旗舰", desc:"Flexbox 沙盒：内置完整 flex 布局解算（换行行断、grow/shrink 加权、align-self、order），左浏览器原生、右内核坐标双视图对照，附圣杯布局等 8 个配方与 CSS 一键导出、溢出体检，离线可用。", tags:["flexbox","css","layout","flex","responsive","design"]},
   {id:"ShadowForge", name:"ShadowForge", icon:"shadow", cat:"设计工具", badge:"旗舰", desc:"多层阴影工坊：以指数曲线生成 1–10 层协调阴影，内置 Material 0–5 高程阶梯，支持 box/text/drop 类型反解粘贴与累计透明度、CSS 变量、Tailwind 输出，附光源方向与硬度体检，离线可用。", tags:["shadow","css","design","elevation","material","box-shadow"]},
   {id:"PemForge", name:"PemForge", icon:"pem", cat:"安全工具", badge:"旗舰", desc:"PEM / X.509 检查器：内置 ASN.1 DER 编解码器，解析证书、CSR 与 RSA/EC 私钥，展示 ASN.1 结构树与字节偏移并规范化重编码，附 SHA-1/弱 RSA/有效期/398 天/SAN/v1 等体检，数据不出本机。", tags:["pem","x509","certificate","csr","asn1","tls"]},
-  {id:"HtaccessForge", name:"HtaccessForge", icon:"htaccess", cat:"网络", badge:"旗舰", desc:"Apache .htaccess 生成器：HTTPS/www 跳转、自定义重定向、SPA 重写、缓存与 Gzip、安全响应头、CORS、防盗链、Basic 认证、IP/UA 封禁、错误页一键产出，附逐行解释、配置体检与统计，与 NginxForge 对位，离线可用。", tags:["htaccess","apache","rewrite","security-headers","cors","devops"]}
+  {id:"HtaccessForge", name:"HtaccessForge", icon:"htaccess", cat:"网络", badge:"旗舰", desc:"Apache .htaccess 生成器：HTTPS/www 跳转、自定义重定向、SPA 重写、缓存与 Gzip、安全响应头、CORS、防盗链、Basic 认证、IP/UA 封禁、错误页一键产出，附逐行解释、配置体检与统计，与 NginxForge 对位，离线可用。", tags:["htaccess","apache","rewrite","security-headers","cors","devops"]},
+  {id:"WebSocketForge", name:"WebSocketForge", icon:"websocket", cat:"网络", badge:"旗舰", desc:"WebSocket 调试台：实时收发、子协议协商、模板变量与心跳保活，外加 RFC 6455 帧开销计算、1000–4999 全量关闭码释义、指数退避重连规划与连接配置体检，断线自愈全过程可见，离线可用。", tags:["websocket","debug","frame","close-code","backoff","realtime"]},
+  {id:"SseForge", name:"SseForge", icon:"sse", cat:"网络", badge:"旗舰", desc:"Server-Sent Events 工作台：内置符合 WHATWG 规范的 SSE 线格式解析器，正确处理 CRLF/CR/LF 混排、BOM、多行 data 拼接、空 data 不派发与非法 retry 忽略；支持逐字节分块投喂模拟、流体检、EventSource 实时客户端与 Nginx/Node 服务端速查，离线可用。", tags:["sse","eventsource","stream","wire-format","realtime","web"]},
+  {id:"MqttForge", name:"MqttForge", icon:"mqtt", cat:"网络", badge:"旗舰", desc:"MQTT 3.1.1 报文工坊：手写实现的二进制编解码器，可构造 CONNECT/PUBLISH/SUBSCRIBE/UNSUBSCRIBE 等控制报文并逐字节拆解字段含义，内置变长剩余长度编码、粘包与截断识别、主题通配符匹配器（#/+/$ 规范细则）与 MQTT-over-WebSocket 实时客户端，离线可用。", tags:["mqtt","iot","packet","codec","topic","realtime"]},
+  {id:"SdpForge", name:"SdpForge", icon:"sdp", cat:"网络", badge:"旗舰", desc:"WebRTC SDP 解剖台：拆开 offer/answer 的每条媒体、编解码器、头部扩展与 ICE 候选，把候选优先级按 RFC 8445 反解成类型优先/本地优先/组件号，核对 offer 与 answer 的 m 行顺序、mid、方向互补、DTLS 角色与载荷类型交集，另附体检与一键脱敏（抹掉地址、ICE 口令、DTLS 指纹与流标识），离线可用。", tags:["webrtc","sdp","ice","candidate","negotiation","realtime"]}
   ];
   var ICONS = {
     regex:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
@@ -818,7 +822,11 @@ if(typeof window!=='undefined'){
   flexbox:'<rect x="3" y="6" width="7" height="12" rx="1"/><rect x="12" y="6" width="4" height="12" rx="1"/><rect x="18" y="6" width="3" height="12" rx="1"/>',
   shadow:'<rect x="4" y="5" width="12" height="9" rx="1"/><rect x="8" y="9" width="12" height="9" rx="1" fill="none"/>',
   pem:'<path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M10 12h4M10 15h4"/>',
-  htaccess:'<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/>'
+  htaccess:'<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/>',
+  websocket:'<path d="M3 12h4l3-5 4 10 3-5h4"/>',
+  sse:'<path d="M4 7h10M4 12h16M4 17h7"/><circle cx="18" cy="7" r="2"/><circle cx="14" cy="17" r="2"/>',
+  mqtt:'<path d="M4 19a15 15 0 0 1 15-15"/><path d="M4 13a9 9 0 0 1 9 9"/><circle cx="5" cy="19" r="1.6"/>',
+  sdp:'<path d="M7 4v16M17 4v16"/><path d="M7 9h10M7 15h10"/><circle cx="7" cy="4" r="1.5"/><circle cx="17" cy="20" r="1.5"/>'
   };
   function iconSvg(k){ return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+(ICONS[k]||"")+'</svg>'; }
 
