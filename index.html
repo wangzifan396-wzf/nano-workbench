@@ -477,7 +477,11 @@ if(typeof window!=='undefined'){
   {id:"KeypairForge", name:"KeypairForge", icon:"keypair", cat:"编码加密", badge:"旗舰", desc:"密钥对工作台：浏览器内 WebCrypto 生成 Ed25519/X25519/P-256·384·521/RSA 2048·3072·4096，切成 OpenSSH/PEM/JWK 六种形态、四套指纹，配对校验与命令速查，私钥不离开标签页。", tags:["keypair","key","ssh","pem","jwk","crypto"]},
   {id:"SshForge", name:"SshForge", icon:"ssh", cat:"编码加密", badge:"旗舰", desc:"OpenSSH 公钥工坊：解析单行公钥/authorized_keys/known_hosts，本地算 SHA-256/MD5 指纹、randomart 与类型，两密钥同源配对校验，离线。", tags:["ssh","fingerprint","known_hosts","openssh","randomart"]},
   {id:"JwkForge", name:"JwkForge", icon:"jwk", cat:"编码加密", badge:"旗舰", desc:"JWK/JWKS 工坊：RFC 7517/7638/8037 解析、规范化与指纹，识别密钥类型，与 PEM(SPKI/PKCS#8)/DER 双向转换，ASN.1 DER 本机手写。", tags:["jwk","jwks","pem","rfc7638","crypto","key"]},
-  {id:"JwsForge", name:"JwsForge", icon:"jws", cat:"编码加密", badge:"旗舰", desc:"JWS 工作台：RFC 7515 紧凑/JSON(general/flattened)解析与 detached，JWK 验签 HS*/RS*/ES*，私钥签发紧凑 JWS，纯 JS 同步、离线。", tags:["jws","jwt","sign","verify","crypto","rfc7515"]}
+  {id:"JwsForge", name:"JwsForge", icon:"jws", cat:"编码加密", badge:"旗舰", desc:"JWS 工作台：RFC 7515 紧凑/JSON(general/flattened)解析与 detached，JWK 验签 HS*/RS*/ES*，私钥签发紧凑 JWS，纯 JS 同步、离线。", tags:["jws","jwt","sign","verify","crypto","rfc7515"]},
+  {id:"TldrForge", name:"TldrForge", icon:"tldr", cat:"效率工具", badge:"旗舰", desc:"TLDR 速查台：内置 40+ 常用 CLI 命令（git/docker/ssh/nginx 等）的简版手册，支持关键词搜索、分类浏览与用法示例一键复制，离线可用。", tags:["tldr","cheatsheet","cli","man","examples","docs"]},
+  {id:"Pbkdf2Forge", name:"Pbkdf2Forge", icon:"pbkdf2", cat:"编码加密", badge:"旗舰", desc:"PBKDF2 派生台：纯 JS 手写 RFC 2898 的 PBKDF2（SHA-1/SHA-256），对照 RFC 6070 与 RFC 7914 向量自检，生成盐、估算迭代强度并给出 OWASP 2023 建议，离线可用。", tags:["pbkdf2","kdf","password","sha256","sha1","crypto"]},
+  {id:"SpectroForge", name:"SpectroForge", icon:"spectro", cat:"音频工具", badge:"旗舰", desc:"声谱台：纯 JS 手写 radix-2 FFT，把解码后的音频转成波形与频谱图（Hann 窗、热力色带），可拖入本地音频文件实时分析，离线可用。", tags:["audio","spectrogram","fft","waveform","frequency","music"]},
+  {id:"CarbonForge", name:"CarbonForge", icon:"carbon", cat:"图像工具", badge:"旗舰", desc:"代码卡片生成器：把 JS/Python/Bash/JSON/HTML 片段渲染成 macOS 窗口风格的 SVG 代码卡片，支持语言高亮、明暗主题与一键导出 SVG/PNG，离线可用。", tags:["code","carbon","screenshot","svg","snippet","highlight"]}
   ];
   var ICONS = {
     regex:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
@@ -485,6 +489,10 @@ if(typeof window!=='undefined'){
     ssh:'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3"/><path d="M13 15h4"/>',
     jwk:'<path d="M8 4a2 2 0 0 0-2 2v2a2 2 0 0 1-2 2 2 2 0 0 1 2 2v2a2 2 0 0 0 2 2"/><path d="M16 4a2 2 0 0 1 2 2v2a2 2 0 0 0 2 2 2 2 0 0 0-2 2v2a2 2 0 0 1-2 2"/>',
     jws:'<path d="M12 3l7 3v5c0 4-3 7-7 9-4-2-7-5-7-9V6z"/><path d="M9 12l2 2 4-4"/>',
+  tldr:'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3"/><path d="M13 15h4"/>',
+  pbkdf2:'<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',
+  spectro:'<path d="M3 12h3l2-6 4 14 3-10 2 4h4"/>',
+  carbon:'<path d="M9 8l-4 4 4 4"/><path d="M15 8l4 4-4 4"/>',
     prompt:'<path d="M4 5h16v14H4z"/><path d="M7 9l3 3-3 3"/><path d="M13 15h4"/>',
     cron:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
     diff:'<path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="M16 21l4-4-4-4"/><path d="M20 17H4"/>',
