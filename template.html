@@ -473,10 +473,18 @@ if(typeof window!=='undefined'){
   {id:"WebSocketForge", name:"WebSocketForge", icon:"websocket", cat:"网络", badge:"旗舰", desc:"WebSocket 调试台：实时收发、子协议协商、模板变量与心跳保活，外加 RFC 6455 帧开销计算、1000–4999 全量关闭码释义、指数退避重连规划与连接配置体检，断线自愈全过程可见，离线可用。", tags:["websocket","debug","frame","close-code","backoff","realtime"]},
   {id:"SseForge", name:"SseForge", icon:"sse", cat:"网络", badge:"旗舰", desc:"Server-Sent Events 工作台：内置符合 WHATWG 规范的 SSE 线格式解析器，正确处理 CRLF/CR/LF 混排、BOM、多行 data 拼接、空 data 不派发与非法 retry 忽略；支持逐字节分块投喂模拟、流体检、EventSource 实时客户端与 Nginx/Node 服务端速查，离线可用。", tags:["sse","eventsource","stream","wire-format","realtime","web"]},
   {id:"MqttForge", name:"MqttForge", icon:"mqtt", cat:"网络", badge:"旗舰", desc:"MQTT 3.1.1 报文工坊：手写实现的二进制编解码器，可构造 CONNECT/PUBLISH/SUBSCRIBE/UNSUBSCRIBE 等控制报文并逐字节拆解字段含义，内置变长剩余长度编码、粘包与截断识别、主题通配符匹配器（#/+/$ 规范细则）与 MQTT-over-WebSocket 实时客户端，离线可用。", tags:["mqtt","iot","packet","codec","topic","realtime"]},
-  {id:"SdpForge", name:"SdpForge", icon:"sdp", cat:"网络", badge:"旗舰", desc:"WebRTC SDP 解剖台：拆开 offer/answer 的每条媒体、编解码器、头部扩展与 ICE 候选，把候选优先级按 RFC 8445 反解成类型优先/本地优先/组件号，核对 offer 与 answer 的 m 行顺序、mid、方向互补、DTLS 角色与载荷类型交集，另附体检与一键脱敏（抹掉地址、ICE 口令、DTLS 指纹与流标识），离线可用。", tags:["webrtc","sdp","ice","candidate","negotiation","realtime"]}
+  {id:"SdpForge", name:"SdpForge", icon:"sdp", cat:"网络", badge:"旗舰", desc:"WebRTC SDP 解剖台：拆开 offer/answer 的每条媒体、编解码器、头部扩展与 ICE 候选，把候选优先级按 RFC 8445 反解成类型优先/本地优先/组件号，核对 offer 与 answer 的 m 行顺序、mid、方向互补、DTLS 角色与载荷类型交集，另附体检与一键脱敏（抹掉地址、ICE 口令、DTLS 指纹与流标识），离线可用。", tags:["webrtc","sdp","ice","candidate","negotiation","realtime"]},
+  {id:"KeypairForge", name:"KeypairForge", icon:"keypair", cat:"编码加密", badge:"旗舰", desc:"密钥对工作台：浏览器内 WebCrypto 生成 Ed25519/X25519/P-256·384·521/RSA 2048·3072·4096，切成 OpenSSH/PEM/JWK 六种形态、四套指纹，配对校验与命令速查，私钥不离开标签页。", tags:["keypair","key","ssh","pem","jwk","crypto"]},
+  {id:"SshForge", name:"SshForge", icon:"ssh", cat:"编码加密", badge:"旗舰", desc:"OpenSSH 公钥工坊：解析单行公钥/authorized_keys/known_hosts，本地算 SHA-256/MD5 指纹、randomart 与类型，两密钥同源配对校验，离线。", tags:["ssh","fingerprint","known_hosts","openssh","randomart"]},
+  {id:"JwkForge", name:"JwkForge", icon:"jwk", cat:"编码加密", badge:"旗舰", desc:"JWK/JWKS 工坊：RFC 7517/7638/8037 解析、规范化与指纹，识别密钥类型，与 PEM(SPKI/PKCS#8)/DER 双向转换，ASN.1 DER 本机手写。", tags:["jwk","jwks","pem","rfc7638","crypto","key"]},
+  {id:"JwsForge", name:"JwsForge", icon:"jws", cat:"编码加密", badge:"旗舰", desc:"JWS 工作台：RFC 7515 紧凑/JSON(general/flattened)解析与 detached，JWK 验签 HS*/RS*/ES*，私钥签发紧凑 JWS，纯 JS 同步、离线。", tags:["jws","jwt","sign","verify","crypto","rfc7515"]}
   ];
   var ICONS = {
     regex:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
+    keypair:'<circle cx="8" cy="8" r="4"/><path d="M11 11l6 6"/><circle cx="16" cy="16" r="3"/>',
+    ssh:'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3"/><path d="M13 15h4"/>',
+    jwk:'<path d="M8 4a2 2 0 0 0-2 2v2a2 2 0 0 1-2 2 2 2 0 0 1 2 2v2a2 2 0 0 0 2 2"/><path d="M16 4a2 2 0 0 1 2 2v2a2 2 0 0 0 2 2 2 2 0 0 0-2 2v2a2 2 0 0 1-2 2"/>',
+    jws:'<path d="M12 3l7 3v5c0 4-3 7-7 9-4-2-7-5-7-9V6z"/><path d="M9 12l2 2 4-4"/>',
     prompt:'<path d="M4 5h16v14H4z"/><path d="M7 9l3 3-3 3"/><path d="M13 15h4"/>',
     cron:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
     diff:'<path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="M16 21l4-4-4-4"/><path d="M20 17H4"/>',
