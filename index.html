@@ -465,7 +465,11 @@ if(typeof window!=='undefined'){
   {id:"K8sForge", name:"K8sForge", icon:"k8s", cat:"开发辅助", badge:"旗舰", desc:"Kubernetes 清单生成：Deployment / Service / Ingress / ConfigMap / Secret / HPA / PVC 一键产出合规 YAML，Secret 值自动 base64，命名规范化与镜像 tag、副本数体检，离线可用。", tags:["kubernetes","k8s","yaml","manifest","deployment","devops"]},
   {id:"PromQLForge", name:"PromQLForge", icon:"prom", cat:"数据工具", badge:"旗舰", desc:"PromQL 查询生成：指标名 + 标签匹配 + rate/increase 区间函数 + sum/avg by 聚合 + offset 偏移，内置 CPU/内存/QPS/P99 模板与括号、时长、函数名体检，离线可用。", tags:["promql","prometheus","grafana","observability","metrics","query"]},
   {id:"WAFForge", name:"WAFForge", icon:"waf", cat:"安全工具", badge:"旗舰", desc:"WAF 规则生成：ModSecurity / OWASP-CRS 风格 SecRule 与等价 JSON 策略同时产出，内置 SQLi、XSS、路径遍历、IP 封禁、限流模板与 rule id、phase、动作体检，离线可用。", tags:["waf","modsecurity","owasp","secrule","firewall","security"]},
-  {id:"JqForge", name:"JqForge", icon:"jq", cat:"数据工具", badge:"旗舰", desc:"jq 风格 JSON 变换：浏览器内实现字段访问、数组索引、管道与 map/select/keys/sort_by/group_by/unique/add 等子集解释器，支持比较与 and/or 过滤，数据不出本机。", tags:["jq","json","transform","query","pipeline","data"]}
+  {id:"JqForge", name:"JqForge", icon:"jq", cat:"数据工具", badge:"旗舰", desc:"jq 风格 JSON 变换：浏览器内实现字段访问、数组索引、管道与 map/select/keys/sort_by/group_by/unique/add 等子集解释器，支持比较与 and/or 过滤，数据不出本机。", tags:["jq","json","transform","query","pipeline","data"]},
+  {id:"FlexboxForge", name:"FlexboxForge", icon:"flexbox", cat:"设计工具", badge:"旗舰", desc:"Flexbox 沙盒：内置完整 flex 布局解算（换行行断、grow/shrink 加权、align-self、order），左浏览器原生、右内核坐标双视图对照，附圣杯布局等 8 个配方与 CSS 一键导出、溢出体检，离线可用。", tags:["flexbox","css","layout","flex","responsive","design"]},
+  {id:"ShadowForge", name:"ShadowForge", icon:"shadow", cat:"设计工具", badge:"旗舰", desc:"多层阴影工坊：以指数曲线生成 1–10 层协调阴影，内置 Material 0–5 高程阶梯，支持 box/text/drop 类型反解粘贴与累计透明度、CSS 变量、Tailwind 输出，附光源方向与硬度体检，离线可用。", tags:["shadow","css","design","elevation","material","box-shadow"]},
+  {id:"PemForge", name:"PemForge", icon:"pem", cat:"安全工具", badge:"旗舰", desc:"PEM / X.509 检查器：内置 ASN.1 DER 编解码器，解析证书、CSR 与 RSA/EC 私钥，展示 ASN.1 结构树与字节偏移并规范化重编码，附 SHA-1/弱 RSA/有效期/398 天/SAN/v1 等体检，数据不出本机。", tags:["pem","x509","certificate","csr","asn1","tls"]},
+  {id:"HtaccessForge", name:"HtaccessForge", icon:"htaccess", cat:"网络", badge:"旗舰", desc:"Apache .htaccess 生成器：HTTPS/www 跳转、自定义重定向、SPA 重写、缓存与 Gzip、安全响应头、CORS、防盗链、Basic 认证、IP/UA 封禁、错误页一键产出，附逐行解释、配置体检与统计，与 NginxForge 对位，离线可用。", tags:["htaccess","apache","rewrite","security-headers","cors","devops"]}
   ];
   var ICONS = {
     regex:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
@@ -810,7 +814,11 @@ if(typeof window!=='undefined'){
   k8s:'<path d="M12 3l7 4v8l-7 4-7-4V7z"/><path d="M12 3v18M5 7l14 10M19 7L5 17"/>',
   prom:'<path d="M3 17l5-5 4 3 8-8"/><path d="M3 21h18"/>',
   waf:'<path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z"/><path d="M9 12l2 2 4-4"/>',
-  jq:'<path d="M8 4H6a2 2 0 00-2 2v12a2 2 0 002 2h2"/><path d="M16 4h2a2 2 0 012 2v12a2 2 0 01-2 2h-2"/>'
+  jq:'<path d="M8 4H6a2 2 0 00-2 2v12a2 2 0 002 2h2"/><path d="M16 4h2a2 2 0 012 2v12a2 2 0 01-2 2h-2"/>',
+  flexbox:'<rect x="3" y="6" width="7" height="12" rx="1"/><rect x="12" y="6" width="4" height="12" rx="1"/><rect x="18" y="6" width="3" height="12" rx="1"/>',
+  shadow:'<rect x="4" y="5" width="12" height="9" rx="1"/><rect x="8" y="9" width="12" height="9" rx="1" fill="none"/>',
+  pem:'<path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M10 12h4M10 15h4"/>',
+  htaccess:'<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/>'
   };
   function iconSvg(k){ return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+(ICONS[k]||"")+'</svg>'; }
 
