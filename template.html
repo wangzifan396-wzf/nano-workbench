@@ -481,7 +481,11 @@ if(typeof window!=='undefined'){
   {id:"TldrForge", name:"TldrForge", icon:"tldr", cat:"效率工具", badge:"旗舰", desc:"TLDR 速查台：内置 40+ 常用 CLI 命令（git/docker/ssh/nginx 等）的简版手册，支持关键词搜索、分类浏览与用法示例一键复制，离线可用。", tags:["tldr","cheatsheet","cli","man","examples","docs"]},
   {id:"Pbkdf2Forge", name:"Pbkdf2Forge", icon:"pbkdf2", cat:"编码加密", badge:"旗舰", desc:"PBKDF2 派生台：纯 JS 手写 RFC 2898 的 PBKDF2（SHA-1/SHA-256），对照 RFC 6070 与 RFC 7914 向量自检，生成盐、估算迭代强度并给出 OWASP 2023 建议，离线可用。", tags:["pbkdf2","kdf","password","sha256","sha1","crypto"]},
   {id:"SpectroForge", name:"SpectroForge", icon:"spectro", cat:"音频工具", badge:"旗舰", desc:"声谱台：纯 JS 手写 radix-2 FFT，把解码后的音频转成波形与频谱图（Hann 窗、热力色带），可拖入本地音频文件实时分析，离线可用。", tags:["audio","spectrogram","fft","waveform","frequency","music"]},
-  {id:"CarbonForge", name:"CarbonForge", icon:"carbon", cat:"图像工具", badge:"旗舰", desc:"代码卡片生成器：把 JS/Python/Bash/JSON/HTML 片段渲染成 macOS 窗口风格的 SVG 代码卡片，支持语言高亮、明暗主题与一键导出 SVG/PNG，离线可用。", tags:["code","carbon","screenshot","svg","snippet","highlight"]}
+  {id:"CarbonForge", name:"CarbonForge", icon:"carbon", cat:"图像工具", badge:"旗舰", desc:"代码卡片生成器：把 JS/Python/Bash/JSON/HTML 片段渲染成 macOS 窗口风格的 SVG 代码卡片，支持语言高亮、明暗主题与一键导出 SVG/PNG，离线可用。", tags:["code","carbon","screenshot","svg","snippet","highlight"]},
+  {id:"SamlForge", name:"SamlForge", icon:"saml", cat:"安全工具", badge:"旗舰", desc:"SAML 解码台：粘贴 SAML Response（XML 或 base64），解析 Issuer、NameID、有效期、Audience 与属性声明，校验签名与时间窗，离线可用。", tags:["saml","sso","xml","assertion","security","oidc"]},
+  {id:"OtpForge", name:"OtpForge", icon:"otp", cat:"安全工具", badge:"旗舰", desc:"TOTP 生成台：纯 JS 实现 RFC 6238 / 4226，从 Base32 密钥或 otpauth:// URI 生成动态口令，带时钟容错窗口与倒计时，离线可用。", tags:["totp","hotp","otp","2fa","rfc6238","authenticator"]},
+  {id:"CborForge", name:"CborForge", icon:"cbor", cat:"编码加密", badge:"旗舰", desc:"CBOR 编解码台：RFC 8949 调试器，十六进制字节与结构化值互相转换，支持数组/映射/字节串/标签/浮点，离线可用。", tags:["cbor","serialization","rfc8949","binary","codec","iot"]},
+  {id:"PromqlForge", name:"PromqlForge", icon:"promql", cat:"开发辅助", badge:"旗舰", desc:"PromQL 工作台：解析 Prometheus 查询，拆解指标/标签过滤/范围向量/聚合，并用表单可视化拼装查询，离线可用。", tags:["promql","prometheus","observability","metrics","query"]}
   ];
   var ICONS = {
     regex:'<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>',
@@ -493,6 +497,10 @@ if(typeof window!=='undefined'){
   pbkdf2:'<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',
   spectro:'<path d="M3 12h3l2-6 4 14 3-10 2 4h4"/>',
   carbon:'<path d="M9 8l-4 4 4 4"/><path d="M15 8l4 4-4 4"/>',
+  saml:'<path d="M12 3l7 3v5c0 4-3 7-7 9-4-2-7-5-7-9V6z"/><path d="M9 12l2 2 4-4"/>',
+  otp:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/><path d="M9 3l3 2M15 3l-3 2"/>',
+  cbor:'<path d="M8 4H6a2 2 0 0 0-2 2v4l-2 2 2 2v4a2 2 0 0 0 2 2h2M16 4h2a2 2 0 0 1 2 2v4l2 2-2 2v4a2 2 0 0 1-2 2h-2"/>',
+  promql:'<path d="M3 3v18h18"/><path d="M6 14l4-5 3 3 5-7"/>',
     prompt:'<path d="M4 5h16v14H4z"/><path d="M7 9l3 3-3 3"/><path d="M13 15h4"/>',
     cron:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
     diff:'<path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="M16 21l4-4-4-4"/><path d="M20 17H4"/>',
