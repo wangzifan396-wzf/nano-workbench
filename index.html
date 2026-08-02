@@ -91,7 +91,7 @@
 
 <script>
 /* ---------- 纯函数（供 node 单测，不依赖浏览器） ---------- */
-var BASE = "https://wangzifan396-wzf.github.io/";
+var BASE = "https://wangzifan396-wzf.github.io/WB/tools/";
 function buildDemoUrl(id){ return BASE + id + "/"; }
 function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 function filterTools(tools, q, cat){
@@ -485,7 +485,6 @@ if(typeof window!=='undefined'){
   {id:"SamlForge", name:"SamlForge", icon:"saml", cat:"安全工具", badge:"旗舰", desc:"SAML 解码台：粘贴 SAML Response（XML 或 base64），解析 Issuer、NameID、有效期、Audience 与属性声明，校验签名与时间窗，离线可用。", tags:["saml","sso","xml","assertion","security","oidc"]},
   {id:"OtpForge", name:"OtpForge", icon:"otp", cat:"安全工具", badge:"旗舰", desc:"TOTP 生成台：纯 JS 实现 RFC 6238 / 4226，从 Base32 密钥或 otpauth:// URI 生成动态口令，带时钟容错窗口与倒计时，离线可用。", tags:["totp","hotp","otp","2fa","rfc6238","authenticator"]},
   {id:"CborForge", name:"CborForge", icon:"cbor", cat:"编码加密", badge:"旗舰", desc:"CBOR 编解码台：RFC 8949 调试器，十六进制字节与结构化值互相转换，支持数组/映射/字节串/标签/浮点，离线可用。", tags:["cbor","serialization","rfc8949","binary","codec","iot"]},
-  {id:"PromqlForge", name:"PromqlForge", icon:"promql", cat:"开发辅助", badge:"旗舰", desc:"PromQL 工作台：解析 Prometheus 查询，拆解指标/标签过滤/范围向量/聚合，并用表单可视化拼装查询，离线可用。", tags:["promql","prometheus","observability","metrics","query"]},
   {id:"CvssForge", name:"CvssForge", icon:"cvss", cat:"安全工具", badge:"旗舰", desc:"CVSS 评分计算器：按 CVSS v3.1 / v4.0 指标（AV/AC/PR/UI/S/C/I/A 与 v4 新增的 MSI/CR 等）实时计算基础分、临时分与严重等级（无/低/中/高/严重），并生成可复用的向量串。评估漏洞优先级、撰写安全报告时一目了然，零依赖、离线可用。", tags:["cvss","vulnerability","security","scoring","cve","severity"]},
   {id:"SbomForge", name:"SbomForge", icon:"sbom", cat:"安全工具", badge:"旗舰", desc:"SBOM 工具：粘贴依赖清单（npm/pip/yarn 锁文件或自定义列表），生成 CycloneDX 或 SPDX 格式的软件物料清单，标注组件名称/版本/PURL/许可证与依赖关系，并检测已知弱点模式。梳理供应链、满足合规与审计要求，零依赖、离线可用。", tags:["sbom","cyclonedx","spdx","supply-chain","dependencies","security"]},
   {id:"TerraformForge", name:"TerraformForge", icon:"terraform", cat:"开发辅助", badge:"旗舰", desc:"Terraform/HCL 辅助台：解析与格式化 Terraform 配置，校验 provider/resource/variable 引用一致性，展开 module 调用与 count/for_each，统计资源数与 provider 分布。调试 IaC、做变更前评审的好帮手，零依赖、离线可用。", tags:["terraform","hcl","iac","infrastructure","cloud","aws"]},
