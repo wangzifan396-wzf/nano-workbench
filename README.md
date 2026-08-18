@@ -1,9 +1,10 @@
 # nano-workbench · 工具工作台
 
-> 单文件、零依赖的 **nano-tools 统一工作台**：一个标签页收纳全部 **138** 款单文件工具，点选即在内嵌窗口里运行、标签间即时切换，无需反复打开新页面。
+> 单文件、零依赖的 **nano-tools 统一工作台**：一个标签页收纳 **382** 款精选单文件工具（取自 [WB 全库 1228 款矩阵](https://github.com/wangzifan396-wzf/WB)），点选即在内嵌窗口里运行、标签间即时切换，无需反复打开新页面。
 > 属于 [nano-tools](https://github.com/wangzifan396-wzf) 单文件开发者工具矩阵。
 
-[![live demo](https://img.shields.io/badge/demo-online-brightgreen)](#在线试用)
+[![live demo](https://img.shields.io/badge/demo-online-brightgreen)](https://wangzifan396-wzf.github.io/nano-workbench/)
+[![tools](https://img.shields.io/badge/tools-382%20curated-5E6AD2)](https://wangzifan396-wzf.github.io/nano-workbench/)
 [![license](https://img.shields.io/badge/license-MIT-blue)](#)
 [![single-file](https://img.shields.io/badge/single%20file-1%20HTML-orange)](#)
 
@@ -19,7 +20,7 @@
 
 ## 🖥 在线试用
 
-打开 `index.html` 即可。也可访问 GitHub Pages 在线 Demo（仓库启用后自动生成）。
+打开 `index.html` 即可。也可直接访问在线 Demo 👉 **https://wangzifan396-wzf.github.io/nano-workbench/**
 
 > 说明：工作台以 iframe 加载各工具的 GitHub Pages 在线 demo，因此需要联网；若需完全离线，请直接使用各工具的单文件 `index.html`。
 
@@ -27,7 +28,7 @@
 
 1. 左侧搜索或按分类找到工具，点击即在新标签中打开
 2. 顶部标签栏切换已打开的工具，点 `×` 关闭、点 `↗` 在新标签打开
-3. 所有工具数据与 WB 门户同源，保持 138 款一致
+3. 工具清单与 WB 门户矩阵同源，当前收录 382 款精选（全库 1228 款持续增长，可随时扩充 `TOOLS` 数组）
 
 ## 🛠 开发
 

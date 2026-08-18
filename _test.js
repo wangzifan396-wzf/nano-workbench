@@ -22,11 +22,11 @@ function ok(name, cond) {
   cond ? pass++ : fail++;
 }
 
-// 1. demo URL 拼装
-eq('buildDemoUrl', buildDemoUrl('GraphForge'), 'https://wangzifan396-wzf.github.io/GraphForge/');
+// 1. demo URL 拼装（统一门户 WB/tools/ 地址，旧独立仓库地址已全部下线）
+eq('buildDemoUrl', buildDemoUrl('GraphForge'), 'https://wangzifan396-wzf.github.io/WB/tools/GraphForge/');
 // 2. 转义
 eq('escapeHTML', escapeHTML('<b>&'), '&lt;b&gt;&amp;');
-// 3. 内置工具总数=28
+// 3. 内置工具条目数（粗检下界，当前收录 382 款）
 const TOOLS_ALL = (html.match(/\{id:"/g) || []).length; // 仅粗检模板里的工具条目数量
 ok('模板内嵌工具条目≥28', TOOLS_ALL >= 28);
 // 4. filterTools

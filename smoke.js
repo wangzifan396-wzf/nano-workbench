@@ -1,7 +1,12 @@
 // nano-workbench jsdom 冒烟测试：页面加载无致命 JS 错误，UI 初始化正常
 const fs = require('fs');
 const path = require('path');
-const jsdomMod = require('C:/Users/53014/.workbuddy/binaries/node/workspace/node_modules/jsdom');
+let jsdomMod;
+try {
+  jsdomMod = require('jsdom'); // CI / 本地 npm install jsdom
+} catch (e) {
+  jsdomMod = require('C:/Users/53014/.workbuddy/binaries/node/workspace/node_modules/jsdom'); // 原开发机回退路径
+}
 const JSDOM = jsdomMod.JSDOM || jsdomMod.default || jsdomMod;
 const { VirtualConsole } = jsdomMod;
 
