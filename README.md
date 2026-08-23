@@ -1,6 +1,6 @@
 # nano-workbench · 工具工作台
 
-> 单文件、零依赖的 **nano-tools 统一工作台**：一个标签页收纳 **382** 款精选单文件工具（取自 [WB 全库 1228 款矩阵](https://github.com/wangzifan396-wzf/WB)），点选即在内嵌窗口里运行、标签间即时切换，无需反复打开新页面。
+> 单文件、零依赖的 **nano-tools 统一工作台**：一个标签页收纳 **382** 款精选单文件工具（取自 [WB 全库 1310 款矩阵](https://github.com/wangzifan396-wzf/WB)），点选即在内嵌窗口里运行、标签间即时切换，无需反复打开新页面。
 > 属于 [nano-tools](https://github.com/wangzifan396-wzf) 单文件开发者工具矩阵。
 
 [![live demo](https://img.shields.io/badge/demo-online-brightgreen)](https://wangzifan396-wzf.github.io/nano-workbench/)
@@ -28,7 +28,7 @@
 
 1. 左侧搜索或按分类找到工具，点击即在新标签中打开
 2. 顶部标签栏切换已打开的工具，点 `×` 关闭、点 `↗` 在新标签打开
-3. 工具清单与 WB 门户矩阵同源，当前收录 382 款精选（全库 1228 款持续增长，可随时扩充 `TOOLS` 数组）
+3. 工具清单与 WB 门户矩阵同源，当前收录 382 款精选（全库 1310 款持续增长，可随时扩充 `TOOLS` 数组）
 
 ## 🛠 开发
 
